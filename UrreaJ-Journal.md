@@ -28,8 +28,8 @@ Se habló de distintas herramientas que se pueden utilizar en la terminal, como 
 
 Se habló también de SSH, para el manejo remoto de máquinas.
 También se habló de como manipular archivos de GitHub desde la terminal:
-+ Creando un archivo en editor de texto: emacs 'NombreArchivo'
++ Creando un archivo en editor de texto: `emacs NombreArchivo`
 + Editando su contenido
-+ Añadiendo un commit con 'git commit'
-+ Añadiendolo a GitHub con 'git add'
++ Añadiendo un commit con `git commit`
++ Añadiendolo a GitHub con `git add`
 + Actualizando GitHub con `git push origin master`
