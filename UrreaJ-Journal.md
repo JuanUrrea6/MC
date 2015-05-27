@@ -25,3 +25,10 @@ Se habló de distintas herramientas que se pueden utilizar en la terminal, como 
 
  + El comando SED para reemplazar contenido
  + El comando Curl para importar URL.
+
+También se habló de como manipular archivos de GitHub desde la terminal:
++ Creando un archivo en editor de texto: emacs "NombreArchivo"
++ Editando su contenido
++ Añadiendo un commit con "git commit"
++ Añadiendolo a GitHub con "git add"
++ Actualizando GitHub con "git push origina master"
