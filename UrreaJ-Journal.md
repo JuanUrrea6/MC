@@ -86,7 +86,6 @@ Parámetro          | Resultado
 --until, --before  | *commits* hechos antes de...
 --author, --committer | *commits* hechos por...
 
-
 ###Apuntes de Lectura: Pro Bash Programming
 ####Resumen Capítulo 1: Comandos y Conceptos Básicos
 A continuación se pueden ver los **comandos** principales que se pueden utilizar en la terminal:
@@ -151,3 +150,8 @@ A continuación se muestran los comandos que permiten administrar el espaciado e
 |---------|--------|---------|
 | `printf "%ns %-ms" Argumentos` | Organiza los alineamientos para correr cada argumento n y m espacios hacia la derecha si es positivo o izquierda si es negativo | `printf "%8s %-10:s" Mensaje` Nótese que el `:` será un caracter que estará fijo en esa posición.|
 | `printf "%nd"` | Organiza la precisión de los decimales incluída. | `printf "%n.md" Argumento`|
+
+Ahora, en lugar de editar la terminal, es posible introducir el *output* en una variable, como se muestra a continuación:
+
+`printf -v VARIABLE "especificación" Argumento`
+
