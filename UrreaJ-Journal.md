@@ -1,5 +1,5 @@
-#27 de Mayo de 2015
-#Comandos Básicos de la Terminal
+###27 de Mayo de 2015
+##Comandos Básicos de la Terminal
 Hola, mundo. Aquí comienza el curso Métodos Computacionales del periodo vacacional 2015-19.
 Herramientas del curso:
 
@@ -28,8 +28,10 @@ Se habló de distintas herramientas que se pueden utilizar en la terminal, como 
   + Operaciones lógicas `awk 'if(condicion) print ALGO'`
     + La condición se representa con un boolean, y la acción, en este caso `print ALGO`, puede ser reemplazada por otra cosa.
 
- + El comando SED para reemplazar contenido
- + El comando Curl para importar URL.
+ + El comando SED para reemplazar contenido `sed 's/ALGO1/ALGO2/g'`
+  + Con este comando, se busca la presencia del caracter ALGO1 y se reemplaza por ALGO2.
+ + El comando Curl para importar URL `curl URL`
+  +Con este comando, se importa el código proveniente de la página web identificada con el URL dado como parámetro.
 
 Se habló también de SSH, para el manejo remoto de máquinas.
 También se habló de como manipular archivos de GitHub desde la terminal:
