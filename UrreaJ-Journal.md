@@ -52,9 +52,8 @@ También se habló de como manipular archivos de GitHub desde la terminal:
 |   3  | Añadir a GitHub |
 |   4  | Actualizar GitHub |
 
-## Sobre las Lecturas Realizadas
-Se realizaron las lecturas sugeridas y, para soporte y guía, se muestra a continuación:
 
+### 28 de Mayo de 2015
 ##Apuntes Lectura 1: Pro Git
 #####Historia de Commits
 Una vez se está manejando un repositorio, es posible ver la historia de los *commits* que se han creado a medida que este se ha modificado. Para lograr hacer esto, se utiliza el siguiente comando:
