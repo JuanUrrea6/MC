@@ -54,6 +54,39 @@ También se habló de como manipular archivos de GitHub desde la terminal:
 
 ## Sobre las Lecturas Realizadas
 Se realizaron las lecturas sugeridas y, para soporte y guía, se muestra a continuación:
+
+##Apuntes Lectura 1: Pro Git
+#####Historia de Commits
+Una vez se está manejando un repositorio, es posible ver la historia de los *commits* que se han creado a medida que este se ha modificado. Para lograr hacer esto, se utiliza el siguiente comando:
+
+`git log`
+
+Este comando permite ver todos los *commits* que se han creado en orden cronológico inverso. Ahora, es posible dar más parámetros a este comando, como es **-p**, el cual muestra el diff incluído, y **-a**, donde **a** es el número de últimas entradas que se quieran ver. Esta añadidura se vería así, si se toma **a** como 2:
+
+`git log -p -2`
+
+Además de esto, es posible utilizar algunos atajos que facilitan la lectura de los datos arrojado por el comando **log**. Un ejemplo es el de **--stat**, el cual resume los resultados dados. Esto se vería así:
+
+`git log --stat`
+
+#####Limitación de Fechas
+Es posible utilizar ciertos comandos que definan el plazo de tiempo dentro del cual se quiere que se encuentren los *commits* realizados buscados. Estos son **--until** y **--since**. Estos reciben como parámetro distintas variaciones de fechas. Un ejemplo se muestra a continuación:
+
+`git log --since=2.weeks`
+
+Con este código, se obtendrían todos los commits que se han realizado desde hace dos semanas en el repositorio actual. Este tipo de limitadores se puede dividir en distintas categorías:
+
+ * Antes de...
+ * Después de...
+ * Hechos por...
+
+Parámetro          | Resultado
+------------------ | -------------
+--since, --after   | *commits* hechos luego de...
+--until, --before  | *commits* hechos antes de...
+--author, --committer | *commits* hechos por...
+
+
 ###Apuntes de Lectura: Pro Bash Programming
 ####Resumen Capítulo 1: Comandos y Conceptos Básicos
 A continuación se pueden ver los **comandos** principales que se pueden utilizar en la terminal:
