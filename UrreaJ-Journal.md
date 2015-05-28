@@ -20,11 +20,13 @@ Los métodos a "estudiar" son los siguientes:
 Se habló de distintas herramientas que se pueden utilizar en la terminal, como son:
  + Los comandos de AWK
   + Para elegir la enésima fila e imprimirla `awk '{print $n}' archivo`
-    +n representa la fila que quiero elegir, en número.
+    + n representa la fila que quiero elegir, en número.
   + Cambiar el delimitador a algo que yo quiera `awk -F"ALGO"`
     + ALGO representa el nuevo símbolo delimitador. Puede ser coma, punto, dos puntos, etc...
   + Aritmética entre columnas `awk '{print $n + $m}' archivo`
     + n y m son las filas, en número que deseo operar. Puede ser un +, -, *, etc...
+  + Operaciones lógicas `awk 'if(condicion) print ALGO'`
+    + La condición se representa con un boolean, y la acción, en este caso `print ALGO`, puede ser reemplazada por otra cosa.
 
  + El comando SED para reemplazar contenido
  + El comando Curl para importar URL.
