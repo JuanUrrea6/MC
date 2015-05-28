@@ -17,6 +17,8 @@ Los métodos a "estudiar" son los siguientes:
  + Ecuaciones Diferenciales Ordinarias
  + Ecuaciones Diferenciales Parciales
 
+***
+
 Se habló de distintas herramientas que se pueden utilizar en la terminal, como son:
  + Los comandos de AWK
   + Para elegir la enésima fila e imprimirla `awk '{print $n}' archivo`
@@ -35,7 +37,7 @@ Se habló de distintas herramientas que se pueden utilizar en la terminal, como 
 
 Se habló también de SSH, para el manejo remoto de máquinas. Este se muestra a continuación:
 `ssh usuario@MACHINE` Con este comando, se puede realizar una conexión a la máquina denominada MACHINE.
-
+***
 También se habló de como manipular archivos de GitHub desde la terminal:
 + Creando un archivo en editor de texto: `emacs NombreArchivo`
 + Editando su contenido en el editor de texto deseado, en este caso emacs.
