@@ -35,9 +35,10 @@ Se habló de distintas herramientas que se pueden utilizar en la terminal, como 
 
 Se habló también de SSH, para el manejo remoto de máquinas. Este se muestra a continuación:
 `ssh usuario@MACHINE` Con este comando, se puede realizar una conexión a la máquina denominada MACHINE.
+
 También se habló de como manipular archivos de GitHub desde la terminal:
 + Creando un archivo en editor de texto: `emacs NombreArchivo`
-+ Editando su contenido
++ Editando su contenido en el editor de texto deseado, en este caso #emacs.
 + Añadiendo un commit con `git commit`
 + Añadiendolo a GitHub con `git add`
 + Actualizando GitHub con `git push origin master` 
