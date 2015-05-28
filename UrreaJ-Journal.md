@@ -45,3 +45,9 @@ También se habló de como manipular archivos de GitHub desde la terminal:
 + Añadiendolo a GitHub con `git add`
 + Actualizando GitHub con `git push origin master` 
  
+| Paso | Procedimiento|
+|------|--------------|
+|   1  | Crear archivo de texto y editar su contenido|
+|   2  | Añadir un commit|
+|   3  | Añadir a GitHub |
+|   4  | Actualizar GitHub |
