@@ -73,3 +73,10 @@ done
 #Método para sumar las co,umnas 1 y 2 de un archivo
 awk -F '{print $1 + $2}' archivo
 ```
+
+##Método para Sumar dos números naturales
+```
+#!/bin/bash
+#Método para sumar dos números naturales
+printf "%d\n" $(($1 + $2))
+```
