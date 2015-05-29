@@ -111,3 +111,26 @@ sudo chmod 700 archivo.sh
 #Ejecución del archivo
 ./archivo.sh
 ````
+
+####Creación de un Nuevo Repositorio
+Para crear un nuevo repositorio, se crea su nombre en GitHub y luego se utiliza la terminal como se indica:
+
+```
+#Crear el archivo readme
+touch README.md
+
+#Inicializar Git
+git init
+
+#Añadir el archivo readme
+git add README.md
+
+#AÑadir el primer commit
+git commit -m "comentario"
+
+#Añadir un origen para subir todo
+git remote add origin https://github.com/LuchoCastillo/Repositorio.git
+
+#Indexar el archivo al origen creado
+git push -u origin master
+```
