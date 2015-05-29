@@ -147,3 +147,12 @@ for i in {Lim1..Lim2}
  printf $variable
  done
 ```
+También se trabajó indexación. Se muestra una receta para crear números e indexarlos a un archivo.
+```
+#Método para crear n enteros e indexarlos a un archivo csv
+#!/bin/bash
+for i in {1..n}
+ do
+ printf "%d,%d\n" $i >> archivo.csv
+ done
+```
