@@ -160,3 +160,4 @@ for i in {1..n}
  printf "%d,%d\n" $i >> archivo.csv
  done
 ```
+Continuando con el taller, se copió y descomprimió el directorio dado. Se encontró que la fecha del segundo commit realizado fue el sábado 5 de enero de 2013 a las 19:28:57. También, se sabe que el tema de la semana 15 de ese curso fue el **Método de Inferencia Bayesiana**
