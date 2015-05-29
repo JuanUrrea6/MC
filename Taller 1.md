@@ -33,7 +33,6 @@ Haga una copia de este archivo en su GitHub en la carpeta /MC/Talleres/. No olvi
 
 Desarrollo:
 
-1. Archivo MarkDown
 #Sección
 ##Subsección 1: Lista Numerada
 
@@ -46,3 +45,14 @@ Desarrollo:
 * Item 1
 * Item 2
 * Item 3
+
+Código Inline : `printf Hola Mundo`
+
+Código en Bloque:
+```
+#Este método imprime en pantalla
+echo Hola Mundo
+
+#Este método crea un nuevo directorio
+mkdir NuevoDirectorio
+```
