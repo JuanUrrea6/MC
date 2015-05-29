@@ -67,3 +67,9 @@ do
  printf "%d,%d\n" $i $((i*i)) >> archivo1.csv
 done
 ```
+
+##Creación de Código AWK
+```
+#Método para sumar las co,umnas 1 y 2 de un archivo
+awk '{print $1 + $2}' archivo
+```
