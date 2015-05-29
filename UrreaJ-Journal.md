@@ -137,6 +137,9 @@ git push -u origin master
 ###29 de Mayo de 2015
 ##Taller en Clase de Comandos Básicos
 Se trabajó en el taller dado, donde lo primero que se hizo fue crear un documento en MarkDwon con los comandos explicados en la entrada anterior de esta bitácora. Sin embargo, también se trabajó código en BASH basado en las lecturas enviadas.
+
+* Variables en BASH: `$variable = valor`
+
 ####Creación de loops en Bash
 ```
 #Creación de un loop genérico
@@ -148,6 +151,7 @@ for i in {Lim1..Lim2}
  done
 ```
 También se trabajó indexación. Se muestra una receta para crear números e indexarlos a un archivo.
+####Indexación Genérica
 ```
 #Método para crear n enteros e indexarlos a un archivo csv
 #!/bin/bash
