@@ -34,15 +34,15 @@ Haga una copia de este archivo en su GitHub en la carpeta /MC/Talleres/. No olvi
 Desarrollo:
 
 1. Archivo MarkDown
-
-##Sección 1: Lista Numerada
+#Sección
+##Subsección 1: Lista Numerada
 
 1. Item 1
 2. Item 2
 3. Item 3
 
-##Sección 2: Lista No Numerada
+##Subsección 2: Lista No Numerada
 
-*Item 1
-*Item 2
+* Item 1
+* Item 2
 * Item 3
