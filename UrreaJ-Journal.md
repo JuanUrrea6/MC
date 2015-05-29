@@ -134,3 +134,5 @@ git remote add origin https://github.com/LuchoCastillo/Repositorio.git
 #Indexar el archivo al origen creado
 git push -u origin master
 ```
+###29 de Mayo de 2014
+##Taller en Clase de Comandos Básicos
