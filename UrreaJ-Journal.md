@@ -19,31 +19,66 @@ Los métodos a "estudiar" son los siguientes:
 
 ***
 
-Se habló de distintas herramientas que se pueden utilizar en la terminal, como son:
- + Los comandos de AWK
-  + Para elegir la enésima fila e imprimirla `awk '{print $n}' archivo`
-    + n representa la fila que quiero elegir, en número.
-  + Cambiar el delimitador a algo que yo quiera `awk -F"ALGO"`
-    + ALGO representa el nuevo símbolo delimitador. Puede ser coma, punto, dos puntos, etc...
-  + Aritmética entre columnas `awk '{print $n + $m}' archivo`
-    + n y m son las filas, en número que deseo operar. Puede ser un +, -, *, etc...
-  + Operaciones lógicas `awk 'if(condicion) print ALGO'`
-    + La condición se representa con un boolean, y la acción, en este caso `print ALGO`, puede ser reemplazada por otra cosa.
+Se habló de distintas herramientas que se pueden utilizar en la terminal, como son los comandos en AWK:
+````
+#Elegir la n-sima fila e imprimirla de un archivo
+awk '{print $n}' archivo
 
- + El comando SED para reemplazar contenido `sed 's/ALGO1/ALGO2/g'`
-  + Con este comando, se busca la presencia del caracter ALGO1 y se reemplaza por ALGO2.
- + El comando Curl para importar URL `curl URL`
-  + Con este comando, se importa el código proveniente de la página web identificada con el URL dado como parámetro.
+#cambiar el delimitador en un archivo. Se cambia a algo nuevo.
+awk -F"ALGO"
 
-Se habló también de SSH, para el manejo remoto de máquinas. Este se muestra a continuación:
-`ssh usuario@MACHINE` Con este comando, se puede realizar una conexión a la máquina denominada MACHINE.
+#Operaciones entre columnas de un archivo. Se muestra la suma, pero puede ser cualquier otra operación.
+awk '{print $n + $m}' archivo
+
+#Operaciones lógicas. La acción puede ser reemplazada por la que se requiera.
+awk 'if(condicion) print ALGO'
+````
+
+También se habló del uso del comando SED y CURL:
+```
+#Se toma ALGO1 y se reemplaza po ALGO2
+sed 's/ALGO1/ALGO2/g'
+
+#Importar código de una URL
+curl URL
+
+#Conexión remota con SSH a una máquina llamada machine
+ssh usuario@MACHINE
+````
+
+Otros comando bastante útiles son aquellos para el desplazamiento y manipulación de archivos en la terminal
+```
+#Crear un archivo de texto.
+nombreEditor nombreArchivo
+
+#Moverse a un directorio
+cd nombreDiectorio
+
+#Ver los contenidos del directorio
+ls
+
+#Enviar archivo a un destino
+archivo1 > archivo2
+````
 ***
 También se habló de como manipular archivos de GitHub desde la terminal:
-+ Creando un archivo en editor de texto: `emacs NombreArchivo`
-+ Editando su contenido en el editor de texto deseado, en este caso emacs.
-+ Añadiendo un commit con `git commit`
-+ Añadiendolo a GitHub con `git add`
-+ Actualizando GitHub con `git push origin master` 
+```
+#Crear archivo en editor de texto y editarlo.
+emacs NombreArchivo
+
+#Añadir el commit correspondiente.
+git commit
+
+#Añadiendo a GitHub
+git add
+
+#Actualizando Github
+git push origin master
+
+#También se puede extraer el repository de GitHub
+git pull origin master
+```
+ En resumen:
  
 | Paso | Procedimiento|
 |------|--------------|
@@ -52,105 +87,24 @@ También se habló de como manipular archivos de GitHub desde la terminal:
 |   3  | Añadir a GitHub |
 |   4  | Actualizar GitHub |
 
+Para recordar también un ejemplo realizado en clase, se muestran algunos método importantes para lo visto.
+####Imprimir en Pantalla Mensajes Simples
+````
+echo "mensaje"
+````
+####Imprimir en Pantalla Mensaje Complejos de String
+```
+printf "%s\n" Mensaje
+````
+Cabe notar que ambas formas se pueden utilizar en la consola de Mac, aunque con el comando `printf` se pueden hacer cosas más interesantes, como organizar espaciado o la precisión de decimales.
 
-### 28 de Mayo de 2015
-##Apuntes Lectura 1: Pro Git
-#####Historia de Commits
-Una vez se está manejando un repositorio, es posible ver la historia de los *commits* que se han creado a medida que este se ha modificado. Para lograr hacer esto, se utiliza el siguiente comando:
-
-`git log`
-
-Este comando permite ver todos los *commits* que se han creado en orden cronológico inverso. Ahora, es posible dar más parámetros a este comando, como es **-p**, el cual muestra el diff incluído, y **-a**, donde **a** es el número de últimas entradas que se quieran ver. Esta añadidura se vería así, si se toma **a** como 2:
-
-`git log -p -2`
-
-Además de esto, es posible utilizar algunos atajos que facilitan la lectura de los datos arrojado por el comando **log**. Un ejemplo es el de **--stat**, el cual resume los resultados dados. Esto se vería así:
-
-`git log --stat`
-
-#####Limitación de Fechas
-Es posible utilizar ciertos comandos que definan el plazo de tiempo dentro del cual se quiere que se encuentren los *commits* realizados buscados. Estos son **--until** y **--since**. Estos reciben como parámetro distintas variaciones de fechas. Un ejemplo se muestra a continuación:
-
-`git log --since=2.weeks`
-
-Con este código, se obtendrían todos los commits que se han realizado desde hace dos semanas en el repositorio actual. Este tipo de limitadores se puede dividir en distintas categorías:
-
- * Antes de...
- * Después de...
- * Hechos por...
-
-Parámetro          | Resultado
------------------- | -------------
---since, --after   | *commits* hechos luego de...
---until, --before  | *commits* hechos antes de...
---author, --committer | *commits* hechos por...
-
-###Apuntes de Lectura: Pro Bash Programming
-####Resumen Capítulo 1: Comandos y Conceptos Básicos
-A continuación se pueden ver los **comandos** principales que se pueden utilizar en la terminal:
-
-* **pwd:** Imprime el nombre del directorio en el que me encuentro.
-* **cd:** Cambia del directorio actual al que se introduce como parámetro.
-
- `cd destino`
- 
-* **echo:** Imprime el argumento que se introduzca como parámetro.
- 
- `echo "mensaje"`
-
-* **mkdir:** Crea un nuevo directorio con nombre introducido como parámetro.
-
- `mkdir NombreDirectorio`
- 
-* **chmod:** Permite modificar los permisos que posee u archivo.
-
- `chmod Permisos`
-
-* **printf:** Permite imprimir la cadena de caracteres que se de por parámetro.
-
- `printf "Mensaje"`
-
-A continuación se enuncian los principales **conceptos** útiles en programación Bash:
-
-* **Script:** Archivo que contiene comandos que son ejecutados por la terminal.
-* **Comentarios:** Texto comenzado con numeral (#) el cual no es leído como código.
-
-####Resumen Capítulo 2: Parámetros y Salidas
-Existen varios tipos de parámetros que se clasifican como se muestra a continuación:
-
-* **De Posición:** Denotan, numéricamente, la pisición de un argumento, de la forma `$1`, `$2`, etc...
-* **Variables:** Parámetros que guardan un valor numérico, de carcateres, etc...
-
-A continuación se muestran comandos que permiten modificar la presentación de los argumentos a imprimir:
-
-| Comando | Efecto |
-|---------|--------|
-|`\a` | Alerta |
-| `\b` | Backspace |
-| `\e` | Escape Character|
-| `\t` | TAB Horizontal|
-| `\v` | TAB Vertical|
-| `\\` | Backslash |
-| `\nnn` | Caracter dado por código de 1 a 3 caracteres|
-| `\xHH` | Caracter dado por código de 1 a 2 caracteres|
-
-A continuación se muestran los comandos que se pueden utilizar para especificar el formato de los argumentos dados como entrada al comando `printf`:
-
-| Comando | Efecto | Ejemplo |
-|---------|--------|---------|
-|   %s    | Imprime lo que diga el argumento | `printf "%s\n" Mensaje` |
-| %d | Indica que son argumentos enteros | `printf "%d\n" 25 46 58`|
-| %f | Indica que son fraccionarios | `printf "%f\n" 23.6 7.8`|
-| %e | Notación Científica | `printf "%e\n"`|
-
-A continuación se muestran los comandos que permiten administrar el espaciado en la línea de *output*:
-
-| Comando | Efecto | Ejemplo |
-|---------|--------|---------|
-| `printf "%ns %-ms" Argumentos` | Organiza los alineamientos para correr cada argumento n y m espacios hacia la derecha si es positivo o izquierda si es negativo | `printf "%8s %-10:s" Mensaje` Nótese que el `:` será un caracter que estará fijo en esa posición.|
-| `printf "%nd"` | Organiza la precisión de los decimales incluída. | `printf "%n.md" Argumento`|
-
-Ahora, en lugar de editar la terminal, es posible introducir el *output* en una variable, como se muestra a continuación:
-
-`printf -v VARIABLE "especificación" Argumento`
-
+####Creación de un ejecutable genérico
+En un editor de texto, insertar los comandos correspondientes:
+````
+echo "Mensaje"
+````
+Este archivo de texto, sin formato, se guarda con la terminación **.sh**. Una vez ya se ha guardado, se debe usar la terminal para modificar los permisos del ejecutable. Luego, se procede a ejecutarlo.
+````
+sudo chmod 700 archivo.sh
+./archivo.sh
+````
