@@ -105,6 +105,9 @@ echo "Mensaje"
 ````
 Este archivo de texto, sin formato, se guarda con la terminación **.sh**. Una vez ya se ha guardado, se debe usar la terminal para modificar los permisos del ejecutable. Luego, se procede a ejecutarlo.
 ````
+#Manejo de permisos
 sudo chmod 700 archivo.sh
+
+#Ejecución del archivo
 ./archivo.sh
 ````
