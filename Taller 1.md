@@ -57,3 +57,13 @@ echo Hola Mundo
 mkdir NuevoDirectorio
 ```
 Link [www.google.com]
+
+###Creación de Script BASH
+```
+#!/bin/bash
+#Método que crea los primeros 1000 números naturales y sus cuadrados en un archivo csv
+for i in {1..1000}
+do
+ printf "%d,%d\n" $i $((i*i)) >> archivo1.csv
+done
+```
