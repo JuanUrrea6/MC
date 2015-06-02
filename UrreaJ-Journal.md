@@ -197,3 +197,11 @@ plot sin(t),cos(t)
 También es posible graficar utilizando datos de otros archivos.
 **Ejemplo:**
 `plot "archivo.csv" using columna1:columna2`
+
+##Taller 2: GNUPlot
+**Punto 1:**
+
+Expresión regular con cuatro caracteres al comienzo de una línea y un espacio
+`^... `
+Aquí se utiliza `^` para indicar que se encuentran al comienzo de la línea. Luego, haciendo uso de `.` asigno cualesquiera cuatro caracteres seguidos. Por último, con el espacio se denota la presencia de un espacio ahí. Este ejemplo genérico sirve para aprender a manejar los distintos comandos para expresioens regulares, que luego podría utilizarse para búsquedas y reemplazos para modificar archivos grandes sin necesidad de modificar entrada pr entrada cada una.
+
