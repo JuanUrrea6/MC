@@ -173,3 +173,8 @@ En esta clase se explicaron caracteres que se pueden utilizar para distintos com
 * Buscar varios caracteres `[hfahf\@]`
 * Dígitos `\d`
 * NO dígitos `\D`
+
+Se utilizó TextWrangler para copiar el archivo de los "Jovian Satellites Orbital Parameters". Con eso en ese archivo, se utilizan expresiones regulares para empezar a modificar el archivo.
+Ejemplo para reemplazar espacios al comienzo de la línea por un vacío. 
+`^ ` por ``
+**Nota:** Para no solo seleccionar un caracter, sino todos los que se encuentren seguidos iguales, se utiliza `@+`, donde @ es el caracter deseado.
