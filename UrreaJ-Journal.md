@@ -203,5 +203,15 @@ También es posible graficar utilizando datos de otros archivos.
 
 Expresión regular con cuatro caracteres al comienzo de una línea y un espacio
 `^... `
-Aquí se utiliza `^` para indicar que se encuentran al comienzo de la línea. Luego, haciendo uso de `.` asigno cualesquiera cuatro caracteres seguidos. Por último, con el espacio se denota la presencia de un espacio ahí. Este ejemplo genérico sirve para aprender a manejar los distintos comandos para expresioens regulares, que luego podría utilizarse para búsquedas y reemplazos para modificar archivos grandes sin necesidad de modificar entrada pr entrada cada una.
+Aquí se utiliza `^` para indicar que se encuentran al comienzo de la línea. Luego, haciendo uso de `.` asigno cualesquiera cuatro caracteres seguidos. Por último, con el espacio se denota la presencia de un espacio ahí. Este ejemplo genérico sirve para aprender a manejar los distintos comandos para expresioens regulares, que luego podría utilizarse para búsquedas y reemplazos para modificar archivos grandes sin necesidad de modificar entrada por entrada cada una.
+
+**Punto 3:**
+Para ralizar este punto, se copia manualmente lo encontrado en la página web a un archivo de texto en TextWagler. Una vez ahí, se utiliza Ctrl-F y se introduce el siguiente código:
+```
+#Buscar: Con este comando, se busca una agrupación de 20 caracteres seguidos
+(....................)
+
+#Reemplazar: Con este comando se indica que la agrupación encontrada anteriormente se debe reemplazar por si mismo, pero con un enter para iniciar una nueva línea.
+\1\n
+```
 
