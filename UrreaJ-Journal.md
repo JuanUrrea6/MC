@@ -161,3 +161,15 @@ for i in {1..n}
  done
 ```
 Continuando con el taller, se copió y descomprimió el directorio dado. Se encontró que la fecha del segundo commit realizado fue el sábado 5 de enero de 2013 a las 19:28:57. También, se sabe que el tema de la semana 15 de ese curso fue el **Método de Inferencia Bayesiana**
+
+###Martes 2 de Junio de 2015
+##Expresiones Regulares
+En esta clase se explicaron caracteres que se pueden utilizar para distintos comandos de expresiones regulares.
+
+* Comienzo de línes `^`
+* Fin de línea `$`
+* Intervalos `(a|b)`
+* Uso de caracteres especiales como entrada. `\@`
+* Buscar varios caracteres `[hfahf\@]`
+* Dígitos `\d`
+* NO dígitos `\D`
