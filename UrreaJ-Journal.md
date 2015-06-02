@@ -220,4 +220,9 @@ Para realizar las gráficas usando GNUPlot, se utilizó el siguiente código:
 #Con este comando, se grafican las columnas 2 y 3 del archivo seleccionado, marcando los puntos de los datos conocidos y mostrando la recta de intrpolación.
 set datafile separator "," ; plot "joviansatellites.csv" using 2:3 with linesp
 ```
-Este comando, junto con las distintas modificaciones que se le pueden aplicar, resulta bastante útil para la visualización gráfica de conjuntos de datos a analizar, al igual que para visualizar una función definida sobre un dominio y rango.
+Este comando, junto con las distintas modificaciones que se le pueden aplicar, resulta bastante útil para la visualización gráfica de conjuntos de datos a analizar, al igual que para visualizar una función definida sobre un dominio y rango. Por ejemplo, es posible realizar gráficas paramétricas para análisis donde varios grupos de datos se unen por medio de una palabra.
+```
+#Este comando grafica un círculo parametrizado.
+set parametric
+plot sin(x),cos(x)
+```
