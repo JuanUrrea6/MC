@@ -214,6 +214,7 @@ Para ralizar este punto, se copia manualmente lo encontrado en la página web a 
 #Reemplazar: Con este comando se indica que la agrupación encontrada anteriormente se debe reemplazar por si mismo, pero con un enter para iniciar una nueva línea.
 \1\n
 ```
+Este método resulta importante ya que proporciona un primer acercamiento básico al manejo de datos masivos y su organización, pues al hacer la dicisión de líneas que se requería en este punto, se vuelve más entendible el contenido.
 **Graficación**
 Para realizar las gráficas usando GNUPlot, se utilizó el siguiente código:
 ```
