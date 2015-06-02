@@ -178,3 +178,18 @@ Se utilizó TextWrangler para copiar el archivo de los "Jovian Satellites Orbita
 Ejemplo para reemplazar espacios al comienzo de la línea por un vacío. 
 `^ ` por ``
 **Nota:** Para no solo seleccionar un caracter, sino todos los que se encuentren seguidos iguales, se utiliza `@+`, donde @ es el caracter deseado.
+Para continuar, se aprendió el uso de GNUPLOT, iniciándolo con:
+```
+#Iniciando gnuplot
+gnplot
+
+#Graficar la función seno
+plot sin(x)
+
+#Gráficas paramétricas y quitarla
+set parametric
+unset parametric
+
+#Gráfica paramétrica
+plot sin(t),cos(t)
+```
