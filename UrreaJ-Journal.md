@@ -193,3 +193,7 @@ unset parametric
 #Gráfica paramétrica
 plot sin(t),cos(t)
 ```
+
+También es posible graficar utilizando datos de otros archivos.
+**Ejemplo:**
+`plot "archivo.csv" using columna1:columna2`
