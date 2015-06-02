@@ -214,4 +214,10 @@ Para ralizar este punto, se copia manualmente lo encontrado en la página web a 
 #Reemplazar: Con este comando se indica que la agrupación encontrada anteriormente se debe reemplazar por si mismo, pero con un enter para iniciar una nueva línea.
 \1\n
 ```
-
+**Graficación**
+Para realizar las gráficas usando GNUPlot, se utilizó el siguiente código:
+```
+#Con este comando, se grafican las columnas 2 y 3 del archivo seleccionado, marcando los puntos de los datos conocidos y mostrando la recta de intrpolación.
+set datafile separator "," ; plot "joviansatellites.csv" using 2:3 with linesp
+```
+Este comando, junto con las distintas modificaciones que se le pueden aplicar, resulta bastante útil para la visualización gráfica de conjuntos de datos a analizar, al igual que para visualizar una función definida sobre un dominio y rango.
