@@ -33,6 +33,27 @@ Haga una copia de este archivo en su repositorio de GitHub en la carpeta /MC/Tal
 
 **Solución**
 **Primer Punto**
+El código correspondiente a este script permite poder saber, según lo que diga el archivo, si el taller realizado será calificado.
+```
+#!/bin/bash
+#Método para saber si el taller se revisa.
+#Se importa el archivo CSV
+rm lottery.csv
+rm seleccion.txt
+
+wget https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/lottery/lottery.csv
+
+#Se busca mi código
+grep 201327824 lottery.csv >> seleccion.txt
+
+#Se imprime la primera fila
+fecha=$(head -1 lottery.csv | tail -1)
+echo La fecha es $fecha
+
+#Se imprime para saber si se revisa.
+cat seleccion.txt
+```
+**Segundo Punto**
 ```
 #!/bin/bash
 #Método para organizar el archivo pgn.dat
