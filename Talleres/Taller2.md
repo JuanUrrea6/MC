@@ -46,3 +46,13 @@ sort --field-separator=$'\t' --key=4 pgn.tsv >> pgn.txt
 head -1 pgn.txt | tail -1 >> organizado.txt
 cat organizado.txt
 ```
+**Punto de GNUPlot**
+Para realizar esta gráfica, copiaron los datos de la página web y utilizó TexTWrangler con su función Grep para convertir al archivo en un CSV, aunque aun en formato TXT. Luego de hacer dicha organización, se sabe que la tercera ley de Kepler enuncia que el cuadrado del periodo es porporcional al cubo del eje mayor. Por lo tanto, para confirmar esta relación lineal gráficamente, se realiza el siguiente código.
+```
+#Todo hecho ya en GNUPlot
+#Se declara el rango de X para mejor visualización de la gráfica
+set xrange [0, 10000]
+
+#Se señala el delimitador y se indica que se debe graficar el cuadrado de la columna 4 y el cubo de la columna 2.
+set datafile separator "," ; plot "Saturno.txt" using (($2)**3):(($4)**2)
+```
