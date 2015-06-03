@@ -41,6 +41,6 @@ rm pgn.tsv
 rm organizado.txt
 
 #Eliminar todos los puntos
-sed 's/\.//g' pgn.dat | sed 's/,\d/\./g' | sed -E 's/\ \(/	/g' | sed 's/\ \d/    /g' | sed -E 's/\)//g' | sed -E 's/\(/-/g' > pgn.tsv
+sed 's/\.//g' pgn.dat | sed 's/,\d/\./g' | sed -E 's/\ \(/	/g' | sed 's/\ \d/	/g' | sed -E 's/\)//g' | sed -E 's/\(/-/g' > pgn.tsv
 sort --field-separator=$'\t' --key=4 pgn.tsv >> pgn.txt 
 ```
