@@ -30,3 +30,17 @@ Haga una copia de este archivo en su repositorio de GitHub en la carpeta /MC/Tal
 1. Haga con [Saturno](http://nssdc.gsfc.nasa.gov/planetary/factsheet/saturniansatfact.html) lo mismo que hicimos con Júpiter: limpiar el archivo llevándolo a formato `csv` y hacer una gráfica con `gnuplot` que evalúe la tercera ley de Kepler. Hay que tener especial cuidado con la columna para el periodo de rotación.
 
 **Al terminar la clase ejecute `lottery.sh` para saber si su taller va a ser revisado.**
+
+**Solución**
+**Primer Punto**
+```
+#!/bin/bash
+#Método para organizar el archivo pgn.dat
+rm pgn.txt
+rm pgn.tsv
+rm organizado.txt
+
+#Eliminar todos los puntos
+sed 's/\.//g' pgn.dat | sed 's/,\d/\./g' | sed -E 's/\ \(/	/g' | sed 's/\ \d/    /g' | sed -E 's/\)//g' | sed -E 's/\(/-/g' > pgn.tsv
+sort --field-separator=$'\t' --key=4 pgn.tsv >> pgn.txt 
+```
