@@ -36,15 +36,25 @@ Haga una copia de este archivo en su repositorio de GitHub en la carpeta /MC/Tal
 ```
 #!/bin/bash
 #Método para organizar el archivo pgn.dat
-rm pgn.txt
+rm pgn.dat
+rm ordenado.tsv
 rm pgn.tsv
-rm organizado.txt
+rm pgn.txt
+rm columna.txt
+rm respuesta.txt
 
-#Eliminar todos los puntos
-sed 's/\.//g' pgn.dat | sed 's/,\d/\./g' | sed -E 's/\ \(/	/g' | sed 's/\ \d/	/g' | sed -E 's/\)//g' | sed -E 's/\(/-/g' > pgn.tsv
-sort --field-separator=$'\t' --key=4 pgn.tsv >> pgn.txt
-head -1 pgn.txt | tail -1 >> organizado.txt
-cat organizado.txt
+#Importar de internet el archivo 
+wget https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/talleres/Taller2/pgn.dat
+
+#Se realizan todos los sets en cadena.
+sed 's/\.//g' pgn.dat | sed -E 's/,([0-9])/.\1/g' | sed -E 's/ (\()/     /g' | sed -E 's/ ([0-9])/   \1/g' | sed -E 's/\)//g' | sed -E 's/\(/-/g' >> pgn.tsv
+
+#Se organiza el nuevo archivo y se busca el menor
+sort -n --field-separator=$'\t' --key=4 pgn.tsv >> organizado.tsv
+head -1 organizado.tsv | tail -1 >> correcto.txt
+sed 's/\t/,/g' correcto.txt >> linea.txt
+cut -d , -f 1 linea.txt >> respuesta.txt
+echo El sector con menor variación porcentual es $(cat respuesta.txt)
 ```
 **Punto de GNUPlot**
 
