@@ -47,6 +47,7 @@ head -1 pgn.txt | tail -1 >> organizado.txt
 cat organizado.txt
 ```
 **Punto de GNUPlot**
+
 Para realizar esta gráfica, copiaron los datos de la página web y utilizó TexTWrangler con su función Grep para convertir al archivo en un CSV, aunque aun en formato TXT. Luego de hacer dicha organización, se sabe que la tercera ley de Kepler enuncia que el cuadrado del periodo es porporcional al cubo del eje mayor. Por lo tanto, para confirmar esta relación lineal gráficamente, se realiza el siguiente código.
 ```
 #Todo hecho ya en GNUPlot
