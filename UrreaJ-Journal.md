@@ -246,6 +246,11 @@ plot f(x) with line
 
 #Se grafica con línea y puntos.
 plot f(x) with linesp
+
+#Nombrar gráfica, eje X y eje Y
+set title "Título"
+set xlabel "Eje X"
+set ylabel "Eje Y"
 ```
 * Regresiones
 
