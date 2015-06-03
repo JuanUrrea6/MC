@@ -227,3 +227,28 @@ Este comando, junto con las distintas modificaciones que se le pueden aplicar, r
 set parametric
 plot sin(x),cos(x)
 ```
+###3 de Junio de 2015
+##Más Usos de GNUPlot
+En clase se vieron más aplicaciones y usos de GNUPlot, como los que se muestran a continuación:
+
+* Nomenclatura de Ejes
+```
+#En GNUPlot
+set title "Títulode la Gráfica"
+set xlabel "Eje X"
+set ylabel "Eje Y"
+```
+* Estética de Gráfica
+```
+#En GNUPlot
+plot f(x) with line
+plot f(x) with linesp
+```
+* Regresiones
+Esta aplicación es notablemente importante, pues muchos análisis de datos se basan en regresiones y comportamientos de una serie de datos.
+```
+#Declarar el ajuste modelo
+f(x) = f(x, a, b, c)
+fit f(x) "Archivo" using columna1:columna2 via a, b, c
+```
+Una buena guía para este procedimiento está en (http://gnuplot.sourceforge.net/docs_4.2/node82.html)
