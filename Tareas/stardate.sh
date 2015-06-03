@@ -52,5 +52,9 @@ awk -v dato2=$(($((2015 - $1)) + 1)) '{if ($3 < dato2) print $1, $2}' estrellasO
 #Presentación de resultados.
 echo Look at the following stars:
 echo RA 		DEC 
-cat estrellasOK2.txt
+head -1 estrellasOK2.txt | tail -1
+head -2 estrellasOK2.txt | tail -1
+head -3 estrellasOK2.txt | tail -1
+head -4 estrellasOK2.txt | tail -1
+head -5 estrellasOK2.txt | tail -1
 
