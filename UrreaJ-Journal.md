@@ -245,6 +245,7 @@ plot f(x) with line
 plot f(x) with linesp
 ```
 * Regresiones
+
 Esta aplicación es notablemente importante, pues muchos análisis de datos se basan en regresiones y comportamientos de una serie de datos.
 ```
 #Declarar el ajuste modelo
