@@ -241,14 +241,17 @@ set ylabel "Eje Y"
 * Estética de Gráfica
 ```
 #En GNUPlot
+#Se grafica con una línea
 plot f(x) with line
+
+#Se grafica con línea y puntos.
 plot f(x) with linesp
 ```
 * Regresiones
 
 Esta aplicación es notablemente importante, pues muchos análisis de datos se basan en regresiones y comportamientos de una serie de datos.
 ```
-#Declarar el ajuste modelo
+#Declarar el ajuste modelo y luego realizar el fit.
 f(x) = f(x, a, b, c)
 fit f(x) "Archivo" using columna1:columna2 via a, b, c
 ```
