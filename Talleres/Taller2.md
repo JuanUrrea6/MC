@@ -54,6 +54,15 @@ Para realizar esta gráfica, copiaron los datos de la página web y utilizó Tex
 #Se declara el rango de X para mejor visualización de la gráfica
 set xrange [0, 10000]
 
+#Se declara el título de la gráfica
+set title "Cuadrado del Periodo Vs Cubo del Eje Mayor"
+
+#Se declara el nombre del eje X
+set xlabel "Eje Mayor al Cubo"
+
+#Se declara el nombre del Eje Y
+set ylabel "Cuadrado del Periodo"
+
 #Se señala el delimitador y se indica que se debe graficar el cuadrado de la columna 4 y el cubo de la columna 2.
 set datafile separator "," ; plot "Saturno.txt" using (($2)**3):(($4)**2)
 ```
