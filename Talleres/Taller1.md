@@ -80,3 +80,19 @@ awk -F '{print $1 + $2}' archivo
 #Método para sumar dos números naturales
 printf "%d\n" $(($1 + $2))
 ```
+##Reloj en Bash
+Manera creativa de mostrar un reloj en timpo real en la terminal, haciendo uso de la estética figlet.
+```
+#!/bin/bash
+#Método Para reloj en BASH
+#Se inicia un ciclo infinito
+i=0
+while :
+do
+#Se vacía la terminal y se imprime en figlet la hora cada 1 segundo
+clear
+tiempo=$(date +"%H:%M:%S")
+figlet $tiempo
+sleep 1
+done
+```
