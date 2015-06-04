@@ -96,3 +96,31 @@ figlet $tiempo
 sleep 1
 done
 ```
+##Descarga de Comics
+Para realizar este punto, se tuvo en cuenta el patrón en el URL de los distintos comics como se muestra a continuación:
+```
+#!/bin/bash
+#Método para descargar los comics
+
+Se sabe el patrón de los URL
+for i in {1..150}
+do
+#Se borran los archivo temporales
+rm fuente.txt
+rm linkHallado.txt
+rm linkFinal.txt
+
+#Se obtiene el código fuente
+curl http://xkcd.com/$i/ >> fuente.txt
+
+#Se busca la línea que tiene el URL de la imagen.
+grep URL fuente.txt >> linkHallado.txt
+
+#Se elimina todo excepto el link
+sed 's/Image URL (for hotlinking\/embedding): //g' linkHallado.txt >> linkFinal.txt
+link=$(cat linkFinal.txt)
+
+#Se descarga el archivo correspondiente.
+wget $link
+done
+```
