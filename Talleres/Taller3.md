@@ -40,3 +40,21 @@ cat $file >> archivo.md
 echo "\`\`\`" >> archivo.md
 done
 ```
+
+###Punto 2
+Para realizar el punto 2, se utiliza el siguiente código.
+```
+#!/bin/bash
+#Método para resolver el segundo punto
+rm c31_goto.c
+rm c83_terminal_io.c
+rm cA5_thread_join.c
+
+for file in $(ls *.c)
+do
+cc $file
+grep -A 1 "Example" $file
+./a.out
+read -p "Presione alguna tecla" -n 1 -s
+done
+```
