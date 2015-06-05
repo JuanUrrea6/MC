@@ -124,3 +124,11 @@ link=$(cat linkFinal.txt)
 wget $link
 done
 ```
+##Script para cambiar separador de COMA a TAB
+Este ejecutable puede resultar bastante útil cuando se quiere cambiar el delimitador de un archivo para su uso futuro.
+```
+#!/bin/bash
+#Método para cambiar de comas a tabs en uj archivo que entra como parámetro
+#Se utiliza SED en el rachivo que llega como enrada.
+sed 's/,/   /g' $1 >> nuevo.txt
+```
