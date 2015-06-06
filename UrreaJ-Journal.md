@@ -261,3 +261,34 @@ f(x) = f(x, a, b, c)
 fit f(x) "Archivo" using columna1:columna2 via a, b, c
 ```
 Una buena guía para este procedimiento está en (http://gnuplot.sourceforge.net/docs_4.2/node82.html)
+
+###Viernes 5 de Junio
+##Manejo de C y Python
+Se vieron más funciones básicas en el lenguaje C, como lo son la declaración de variables y métodos en C. La estructura básica de estos se muestra a continuación.
+```
+/*
+* Así se comenta en C. Se crea un método básico.
+*/
+int main(void)
+{
+ /*
+ * Es posible recibir variables como entrada. Primero se declaran con su tipo.
+ */
+ int numero1;
+ 
+ /*
+ * Luego, se pide introducirlas y se leen, enviándo el contenido a la variable declarada antes.
+ */
+ printf("Introduzca un número. \n")
+ scanf("%d", &numero1)
+ 
+ /*
+ * Es posible luego imprimir el contenido de la variable.
+ */
+ printf("Usted introdujo el número:\n")
+ printf(numero1)
+}
+```
+Luego de ver más aplicaciones de C, se suponía que se investigaría sobre el comando **make** y eso se incluiría en la bitácora. Sin embargo, se cpnsideró que no había tiempo, por lo que se procedió a trabajar en el Hands-On que sería introductorio para python. Para este, se utilizó el comando que permite leer contenido dado por el usuario.
+
+* `entrada=raw_input("Introduzca algo")` Este comando recibe una entrada del usuario y la guarda en una variable. Específicamente para la instrucción dada, fue necesario obligar a que la entrada se tomara como un entero, de la forma `numero = int(raw_input("Introduzca un número"))`
