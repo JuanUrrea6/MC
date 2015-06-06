@@ -266,6 +266,7 @@ Una buena guía para este procedimiento está en (http://gnuplot.sourceforge.net
 ##Manejo de C y Python
 Se vieron más funciones básicas en el lenguaje C, como lo son la declaración de variables y métodos en C. La estructura básica de estos se muestra a continuación.
 ```
+#include <stdio.h>
 /*
 * Así se comenta en C. Se crea un método básico.
 */
