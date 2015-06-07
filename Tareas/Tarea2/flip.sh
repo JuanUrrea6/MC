@@ -13,4 +13,5 @@ sed -e "s/$1/.$1/g" $3 >> nuevo1.txt
 sed -e "s/$2/.$2/g" nuevo1.txt > nuevo2.txt
 sed -e "s/\.$1/$2/g" nuevo2.txt >> nuevo3.txt
 sed -e "s/\.$2/$1/g" nuevo3.txt >> nuevo4.txt
+cat nuevo4.txt
 
