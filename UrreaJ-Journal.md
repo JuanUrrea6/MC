@@ -293,3 +293,21 @@ int main(void)
 Luego de ver más aplicaciones de C, se suponía que se investigaría sobre el comando **make** y eso se incluiría en la bitácora. Sin embargo, se cpnsideró que no había tiempo, por lo que se procedió a trabajar en el Hands-On que sería introductorio para python. Para este, se utilizó el comando que permite leer contenido dado por el usuario.
 
 * `entrada=raw_input("Introduzca algo")` Este comando recibe una entrada del usuario y la guarda en una variable. Específicamente para la instrucción dada, fue necesario obligar a que la entrada se tomara como un entero, de la forma `numero = int(raw_input("Introduzca un número"))`
+
+###Martes 9 de Junio
+##Bases de Make
+Muchas veces surge la necesidad de repetir procesos que no siempre resultan muy sencillos "a mano". Por este motivo resulta conveniente un programa que automatice este proceso con el uso de comandos específicos de cada proceso necesario para que sea independiente del usuario.
+
+Este proceso de automatización sigue instrucciones muy específicas, como lo son objetivos, pre-requisitos y acciones. Si se traduce a lenguaje cotidiano, se podría afirmar que el archivo **make** sigue la lógica siguiente:
+
+* Se debe hacer algo con el objetivo
+* Solo se hace una vez se cumplen los pre-requisitos
+* Cuando se cumplen, se deben realizar las acciones.
+
+Es posible visualizar este razonamiento en forma de código para el archivo **.mk**.
+```
+#Se realiza un comentario, como siempre.
+archivoObjetivo : archivoPrerequisito
+ acciones a realizar
+```
+Una vez se ha construido el archivo, es posible ejecutarlo. Esto se hace con el comando `gmake -f archivo.mk`. Cabe notar que el ejemplo es el más sencillo que existe. Generalmente se ponen más pre-requisitos y reglas, a la vez que más acciones a realizar cuando se ejecuta el **.mk**. Para manejo de varias instrucciones que involucran muchos archivos, se crean distintas condiciones que permitan mantener un orden claro. 
