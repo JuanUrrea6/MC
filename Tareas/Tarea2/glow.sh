@@ -15,8 +15,8 @@ r1=$(echo "(c($x))^2" | bc -l)
 #Se utiliza circle.sh para generar el círculo.
 ./circle.sh $r1
 #Se esperan 0.3 segundos entre cada iteración.
-sleep 0.3
+sleep 0.2
 #Se avanza en la variable iterante.
-x=$(($x+1))
+x=$(echo "$x + 0.1" | bc -l)
 done
 
