@@ -311,3 +311,7 @@ archivoObjetivo : archivoPrerequisito
  acciones a realizar
 ```
 Una vez se ha construido el archivo, es posible ejecutarlo. Esto se hace con el comando `gmake -f archivo.mk`. Cabe notar que el ejemplo es el más sencillo que existe. Generalmente se ponen más pre-requisitos y reglas, a la vez que más acciones a realizar cuando se ejecuta el **.mk**. Para manejo de varias instrucciones que involucran muchos archivos, se crean distintas condiciones que permitan mantener un orden claro. 
+
+##Proyecto Final
+###9 de Junio de 2015
+Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
