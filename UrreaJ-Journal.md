@@ -315,3 +315,35 @@ Una vez se ha construido el archivo, es posible ejecutarlo. Esto se hace con el 
 ##Proyecto Final
 ###9 de Junio de 2015
 Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
+
+###Miércoles 10 de Junio de 2015
+Se trabajó en las diferentes funcionalidades de MatPlotLib. Para entender mejor esto, se realizaron los ejercicios sugeridos en el hands-on correspondiente a la clase. A continuación se muestra el código que permite la creación de una figura de 5x5 paneles con 25 gráficas, cada una mostrando una figura de lissajous distinta.
+```
+%pylab inline
+from random import randint
+
+#Se pone el estilo por defecto.
+rcdefaults() 
+#Se establece el tamaño de la figura.
+figure(figsize=(10,10))
+#Se crea el parámetro T para senos y cosenos.
+t = linspace(0,6.28, 100)
+#Se inicia el for para generar 25 paneles.
+for i in range(25):
+    #Se definen las funciones para X y Y.
+    def X(h, d):
+        return sin((randint(1,5))*h + d)
+    def Y(h):
+        return cos(randint(1,5)*h)
+    #Se crea un panel
+    subplot(5,5,i+1)
+    #Se quita su cuadrícula.
+    grid(False)
+    #Se quitan los ejes.
+    axis('off')
+    #Se genera un desfase aleatorio.
+    desfase = randint(1,3)
+    #Se grafica la figura en cada panel.
+    plot(X(t, desfase),Y(t))
+```
+Con este código en iPython Notebook se generan distintas figuras de Lissajous según indica la instrucción.
