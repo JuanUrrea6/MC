@@ -348,3 +348,6 @@ for i in range(25):
     plot(X(t, desfase),Y(t))
 ```
 Con este código en iPython Notebook se generan distintas figuras de Lissajous según indica la instrucción. Esta fue tan solo una pequeña aplicación de todas las funcionalidades de esta biblioteca de Python. El correcto manejo de esta librería permite la realización de gráficas de todo tipo, donde no solo se trabaje con puntos o líneas, sino superficies y volúmenes, lo que facilita el análisis gráfico y la visualización de resultados obtenidos después de varios cálculos.
+La imagen de las 25 figuras de Lissajous que resulta de la ejecución del código anterior se muestra a continuación.
+
+(https://raw.githubusercontent.com/JuanUrrea6/MC/master/Lissajous.png)
