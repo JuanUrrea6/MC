@@ -317,7 +317,8 @@ Una vez se ha construido el archivo, es posible ejecutarlo. Esto se hace con el 
 Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
 
 ###Miércoles 10 de Junio de 2015
-Se trabajó en las diferentes funcionalidades de MatPlotLib. Para entender mejor esto, se realizaron los ejercicios sugeridos en el hands-on correspondiente a la clase. A continuación se muestra el código que permite la creación de una figura de 5x5 paneles con 25 gráficas, cada una mostrando una figura de lissajous distinta.
+##Manejo de MatPlotLib
+Se trabajó en las diferentes funcionalidades de MatPlotLib. Para entender mejor esto, se realizaron los ejercicios sugeridos en el hands-on correspondiente a la clase. A continuación se muestra el código que permite la creación de una figura de 5x5 paneles con 25 gráficas, cada una mostrando una figura de lissajous distinta. Esta temática, al igual que el uso de la graficación estándar en Python, se exploró también en el laboratorio, donde no solo se aprendió a realizar histogramas, sino que también se realizaron ajustes de curva al histograma en si.
 ```
 %pylab inline
 from random import randint
@@ -346,4 +347,4 @@ for i in range(25):
     #Se grafica la figura en cada panel.
     plot(X(t, desfase),Y(t))
 ```
-Con este código en iPython Notebook se generan distintas figuras de Lissajous según indica la instrucción.
+Con este código en iPython Notebook se generan distintas figuras de Lissajous según indica la instrucción. Esta fue tan solo una pequeña aplicación de todas las funcionalidades de esta biblioteca de Python. El correcto manejo de esta librería permite la realización de gráficas de todo tipo, donde no solo se trabaje con puntos o líneas, sino superficies y volúmenes, lo que facilita el análisis gráfico y la visualización de resultados obtenidos después de varios cálculos.
