@@ -351,3 +351,13 @@ Con este código en iPython Notebook se generan distintas figuras de Lissajous s
 La imagen de las 25 figuras de Lissajous que resulta de la ejecución del código anterior se muestra a continuación.
 
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Lissajous.png)
+
+###Sábado 13 de Junio de 2015
+##Apuntes sobre Error e Imprecisión
+Leyendo el libro de Landau acerca del manejo de Python, se obtuvieron nociones básicas de los tipos de errores que pueden aparecer a lo largo de la implementación de cálculos y algoritmos computacionales. Lo primero que se vio fueron los distintos tipos de errores, los cuales se enuncia a continuación:
+* **Teóricos:** Dependen del trasfondo teórico en el cual se basa todo el procedimiento. Si estos ocurren, el procedimiento está condenado al fracaso.
+*  **Aleatorios:** Debidos a eventos fuera de nuestro control, como accidentes o fenómenos aleatorios durante el experimento.
+*  **Aproximación 1:** Debido a aproximaciones de procdimiento que teóricamente deberían ser infinitos, como series o integrales impropias.
+*  **Aproximación 2:** Debido a las aproximaciones y redondeos decimales que realiza el computador. Al realizar varios procesos con decimales, este error se propaga notablemente.
+
+También, además de la explicación y realización de diversos ejemplos para demostrar la presencia de errores en cálculos hechos por computador, se habló de maneras de abordarlos para poder corregirlos, o evitarlos en la medida de lo posible. Por ejemplo, se habló de como operaciones que involucran número muy grandes y numeros muy pequeños con decimales causan una gran presencia de error, pues por el orden de magnitud mayor, se desprecian los valores de orden de magnitud mucho menor. Algo similar ocurre cuando se trabajo con series, pues a mayor número de términos que se usan para dar exactitud al resultado, se pierde precisión en la suma de números de bajo orden de magnitud.
