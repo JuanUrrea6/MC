@@ -391,6 +391,10 @@ plot(u, ajuste(u, *fitpars), color = "Red", label = "Ajuste Teórico", ls = "--"
 xlim(2.2, 4.5)
 legend()
 ```
+
+Los gráficos obtenidos al implementar este código se muestran a continuación:
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Python/Ajuste.png)
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Python/Intrapolacion.png)
 ##Proyecto Final
 ###9 de Junio de 2015
 Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
