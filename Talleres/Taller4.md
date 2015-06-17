@@ -129,6 +129,9 @@ scatter(r, escalon)
 plot(z, ajusteEscalon(z))
 ```
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Imagen6.png)
+
+Por lo mostrado en el ajuste realizado a los datos del escalón, se puede inferir que estos a futuro no presentan oscilaciones, pues al igual que con las gráficas de pulsos, a menos de que se realicen sumas continuas de escalones o pulsos en distintos instantes, no presentan oscilaciones.
+
 ###Punto 2
 ```
 datos = genfromtxt("intrapolar.txt", delimiter=",") #Se obtienen los valores de la tabla
