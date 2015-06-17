@@ -41,6 +41,7 @@ Haga una copia de este archivo en su repositorio de GitHub en la carpeta /MC/Tal
 |4.45641816306|-0.0704087548339|
 
 ##Solución
+Por si acaso, el notebook se puede encontrar en https://github.com/JuanUrrea6/MC/blob/master/Talleres/Material/Taller%204.ipynb
 ```
 %pylab inline
 from scipy.optimize import curve_fit
