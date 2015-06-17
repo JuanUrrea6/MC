@@ -59,7 +59,7 @@ xlabel("Valor en X")
 ylabel("Seno(x)")
 legend()
 ```
-**Imagen 1**
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Imagen1.png)
 ```
 Intrapolación Cúbica
 
@@ -68,14 +68,14 @@ funcionSeno = interp1d(p, seno, kind='cubic')
 scatter(p, seno) #Se grafican los datos y la intrapolación.
 plot(x, funcionSeno(x), color = "Red")
 ```
-**Imagen 2**
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Imagen2.png)
 ```
 Se puede observar que el ajuste cúbico realizado se ajusta de manera apropiada. Ahora, se obtienen los valores intrapolados para los números dados.
 print("Valores Intrapolados", funcionSeno(0), funcionSeno(pi/2), funcionSeno(pi), funcionSeno(3*pi/2), funcionSeno(2*pi))
 print("Valores Teóricos",sin(0), sin(pi/2), sin(pi), sin(3*pi/2), sin(2*pi))
 Se puede observar en el arreglo obtenido la similitud entre los valores teóricos y los valores obtenidos por la intrapolación.
 ```
-**Imagen 3**
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Imagen3.png)
 ```
 Intrapolación Polinómica
 #Ajuste Polinomial de Lagrange
@@ -94,7 +94,7 @@ xlabel("Valor en X")
 ylabel("Seno(x)")
 legend(bbox_to_anchor=(0.5,1))
 ```
-**Imagen4**
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Imagen4.png)
 ```
 print("Datos Intrapolados",funcion(0), funcion(pi/2), funcion(pi), funcion(3*pi/2), funcion(2*pi))
 print("Datos Teóricos",sin(0), sin(pi/2), sin(pi), sin(3*pi/2), sin(2*pi))
@@ -110,7 +110,7 @@ title("Intrapolación Lineal")
 xlabel("Valor en X")
 ylabel("Sen (x)")
 ```
-**Imagen 5**
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Imagen5.png)
 ```
 print("Valores Intrapolados",linea(0), linea(pi/2), linea(pi), linea(3*pi/2), linea(2*pi))
 print("Valores teóricos", sin(0), sin(pi/2), sin(pi), sin(3*pi/2), sin(2*pi))
@@ -127,7 +127,7 @@ scatter(r, escalon)
 title("Escalón")
 show()
 ```
-**Imagen 6**
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Imagen6.png)
 ```
 #Se busca realizar ajuste.
 print(lagrange(r, escalon))
@@ -137,7 +137,7 @@ z = linspace(-4, 4, 100) #Se grafica para ver las oscilaciones
 scatter(r, escalon)
 plot(z, ajusteEscalon(z))
 ```
-**Imagen 7**
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Imagen7.png)
 ###Punto 2
 ```
 datos = genfromtxt("intrapolar.txt", delimiter=",") #Se obtienen los valores de la tabla
@@ -148,7 +148,7 @@ ajusteDatos = interp1d(x, y, kind='cubic') #Se realiza la intrapolación.
 scatter(x, y) #Se grafica para visualizar
 plot(f, ajusteDatos(f))
 ```
-**Imagen 8**
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Imagen8.png)
 ```
 h = linspace(0.14,4.44,24) #Valores a analizar.
 y = ajusteDatos(h) #Valores intrapolados espaciados igualmente.
