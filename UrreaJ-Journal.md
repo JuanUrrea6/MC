@@ -361,3 +361,37 @@ Leyendo el libro de Landau acerca del manejo de Python, se obtuvieron nociones b
 *  **Aproximación 2:** Debido a las aproximaciones y redondeos decimales que realiza el computador. Al realizar varios procesos con decimales, este error se propaga notablemente.
 
 También, además de la explicación y realización de diversos ejemplos para demostrar la presencia de errores en cálculos hechos por computador, se habló de maneras de abordarlos para poder corregirlos, o evitarlos en la medida de lo posible. Por ejemplo, se habló de como operaciones que involucran número muy grandes y numeros muy pequeños con decimales causan una gran presencia de error, pues por el orden de magnitud mayor, se desprecian los valores de orden de magnitud mucho menor. Algo similar ocurre cuando se trabajo con series, pues a mayor número de términos que se usan para dar exactitud al resultado, se pierde precisión en la suma de números de bajo orden de magnitud.
+
+###Martes 16 de Junio de 2015
+##Interpolación y Ajustes
+Durante clase se aprendió el manejo básico de las funciones de ajuste como lo son **polyfit** de numpy y **curve_fit** de scipy. Para aplicar lo visto, se realizó el hands on, de donde se puede resaltar el siguiente punto.
+```
+%pylab inline
+from scipy.optimize import curve_fit
+
+#Creación de Arreglos
+x=[2.3, 2.8, 3.2, 3.7, 4.3]
+y=[34745, 19689, 12594, 7982, 5822]
+
+u = linspace(2,5,100) #Linspace sobre el cual graficar.
+def ajuste(t, m): #Definir la función modelo.
+    return (((0.2)*m)/((t)**3))
+fitpars, covmat=curve_fit(ajuste, x, y) #Realizar ajuste.
+
+scatter(x, y, label = "Datos") #Plotear datos y ajuste.
+plot(u, ajuste(u, *fitpars), color = "Red", label = "Ajuste Teórico", ls = "--")
+xlim(2.2, 4.5)
+legend()
+
+#Intrapolación usando el valor obtenido para m (2118294.96442)
+r = linspace(2.3, 4.3, 100) #Distancias a intrapolar
+r2 = [] #Nuevo arreglo
+for i in range(len(r)):
+    actual = (423658.8)/(r[i])**3 #Obtenicón de datos
+    r2.append(actual)
+
+scatter(r,r2, color = "Green", label = "Datos Intrapolados") #Graficar os datos intrapolados
+plot(u, ajuste(u, *fitpars), color = "Red", label = "Ajuste Teórico", ls = "--")
+xlim(2.2, 4.5)
+legend()
+```
