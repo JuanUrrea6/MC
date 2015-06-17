@@ -118,15 +118,7 @@ Estudio de los Escalones
 r = [-3, -2, -1, 0, 1, 2, 3]
 pulso = [0,0,0,1,0,0,0]
 escalon=[0,0,0,1,1,1,1]
-scatter(r, pulso)
-title("Pulso")
-show()
-scatter(r, escalon)
-title("Escalón")
-show()
-```
-![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Imagen5.png)
-```
+
 #Se busca realizar ajuste.
 print(lagrange(r, escalon))
 def ajusteEscalon(x): #Se construye el ajuste sugerido.
