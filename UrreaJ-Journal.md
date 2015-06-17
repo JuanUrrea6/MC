@@ -312,10 +312,6 @@ archivoObjetivo : archivoPrerequisito
 ```
 Una vez se ha construido el archivo, es posible ejecutarlo. Esto se hace con el comando `gmake -f archivo.mk`. Cabe notar que el ejemplo es el más sencillo que existe. Generalmente se ponen más pre-requisitos y reglas, a la vez que más acciones a realizar cuando se ejecuta el **.mk**. Para manejo de varias instrucciones que involucran muchos archivos, se crean distintas condiciones que permitan mantener un orden claro. 
 
-##Proyecto Final
-###9 de Junio de 2015
-Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
-
 ###Miércoles 10 de Junio de 2015
 ##Manejo de MatPlotLib
 Se trabajó en las diferentes funcionalidades de MatPlotLib. Para entender mejor esto, se realizaron los ejercicios sugeridos en el hands-on correspondiente a la clase. A continuación se muestra el código que permite la creación de una figura de 5x5 paneles con 25 gráficas, cada una mostrando una figura de lissajous distinta. Esta temática, al igual que el uso de la graficación estándar en Python, se exploró también en el laboratorio, donde no solo se aprendió a realizar histogramas, sino que también se realizaron ajustes de curva al histograma en si.
@@ -395,3 +391,9 @@ plot(u, ajuste(u, *fitpars), color = "Red", label = "Ajuste Teórico", ls = "--"
 xlim(2.2, 4.5)
 legend()
 ```
+##Proyecto Final
+###9 de Junio de 2015
+Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
+
+###Martes 16 de Junio de 2015
+Para el proyecto final sería posible, ahora que se sabe como realizar ajustes básicos a distintos tipos de curvas, la implementación de esto a distintos sets de datos, como podría ser para problemas de movimient, como se mencionó antes, o de cosmología, mi principal interés. Estas funciones podrían venir especialmente en la sección de contraste con teoría que se realice en el proyecto. Esto podría juntarse con una función que he venido investigando, **quiver()**, con la cual se pueden graficar distintos campos vectoriales, por lo que la realización de ajuste de curva podrá ayudar a visualizar el comportamiento de un movimiento bajo el efecto de dichos campos, creando un análisis gráfica bastante completo. El análisis y estudio de situaciones como la órbita de satélites sería bastante interesante cuando se toma el campo de fuerza gravitacional del cuerpo principal, los datos conocidos de posición y el ajuste para contrastar.
