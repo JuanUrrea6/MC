@@ -152,7 +152,7 @@ xlabel("Valor en X")
 ylabel("Valor en Y")
 legend()
 print("Datos Intrapolados")
-print(h) #generar datos en X espaciados igualmente
-print(y) #Generar datos en Y espaciados igualmente.
+print(h) #generar datos en X espaciados igualmente.
+print(y) #Generar datos en Y.
 ```
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Imagen8.png)
