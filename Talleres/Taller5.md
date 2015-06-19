@@ -21,3 +21,12 @@ Haga una copia de este archivo en su repositorio de GitHub en la carpeta /MC/Tal
 
 ##Solución.
 ###Punto 1
+En el link se encuentra el notebook, llamado Gibbs.ipynb, que contiene la solución a este punto.
+(https://github.com/JuanUrrea6/MC/blob/master/Talleres/Material/Gibbs.ipynb)
+
+###Punto 2
+Para crear la etiqueta, se ejecutaron las siguientes líneas en la terminal, desde la carpeta del repositorio MC.
+```
+git tag -a v0.33 -m "Mi primera vez." #Crear la etiqueta
+git push origin v0.33 #Subir la etiqueta a github.
+```
