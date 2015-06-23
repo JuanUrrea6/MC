@@ -419,6 +419,46 @@ fft(array) #Transformada de fourier discreta a un arreglo de una dimensión.
 fft2(array) #Transformada de fourier discreta a un arreglo de dos dimensiones.
 ```
 
+###Martes 23 de Junio de 2015
+## Filtros y Fourier
+En la clase se trabajó con el análisis de Fourier para el análisis y filtrado de seÑales, para lo cual se realizó el Hands-On. Este se muestra a continuación.
+```
+%pylab inline
+from scipy.fftpack import fft, ifft
+
+datos = genfromtxt("SolarPeriod.txt", delimiter = ",") #Se importan los datos.
+ano = datos[:,0] #Se separan las columnas en arreglos separados.
+mes = datos[:,1]
+diasUsados = datos[:,2]
+media = datos[:,3]
+desviacion = datos[:,4]
+
+nuevoAno = [] #Se dividen los años por meses.
+for i in range(len(ano)):
+    actual = ano[i] + (mes[i] - 1)/12
+    nuevoAno.append(actual)
+    
+plot(nuevoAno,media) #Se grafican las medias de manchas solares.
+xlim(1900,1990)
+ylim(0,200)
+xlabel("t/año")
+ylabel("manchas solares/mes")
+
+anoCortado = nuevoAno[3480:(len(nuevoAno)-1)] #Se crea la nueva partición de los años para evitar negativos.
+nuevaMedia = media[3480:(len(media) - 1)] #Nuevo arreglo recortado de medias.
+N = len(nuevaMedia) #Se determinan los parámetros del análisis de Fourier.
+dt = (anoCortado[-1] - anoCortado[0])/N #Salto de Tiempo "Infinitesimal"
+transform = fft(nuevaMedia) #Transformada de las Medias
+frecuencia = fftfreq(N,dt) #Se transforma el salto a frecuencias.
+scatter(frecuencia, abs(transform)) #Se grafican para visualizar.
+xlim(-6,6)
+ylim(0,10000)
+
+transform[np.abs(frecuencia) > 0.1] = 0 #Se construye el filtro.
+buenas = ifft(transform) #Se devuelven las pasadas a tiempo.
+plot(anoCortado, buenas) #Se grafica para visualizar/
+plot(anoCortado, media[3480:(len(media) - 1)])
+```
 ##Proyecto Final
 ###9 de Junio de 2015
 Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
