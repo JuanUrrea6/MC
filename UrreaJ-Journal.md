@@ -398,10 +398,7 @@ Los gráficos obtenidos al implementar este código se muestran a continuación:
 
 ###Viernes 19 de Junio de 2015
 ##Transformada de Fourier y Solución de Ecuaciones
-En el laboratorio y magistral, se aprendió el manejo básico y las distintas formas de realizar un ajuste por series de Fourier, en específico a una función escalón de altura $\frac{\pi}{4}$ . Para lograr esto, se hicieron sumas recursivas de la función del **seno cardinal**, que toma la forma:
-
-$\frac{Sen ax}{ax}$
-
+En el laboratorio y magistral, se aprendió el manejo básico y las distintas formas de realizar un ajuste por series de Fourier, en específico a una función escalón de altura pi cuartos. Para lograr esto, se hicieron sumas recursivas de la función del **seno cardinal**.
 Al hacer esto, se obtuvo lo siguiente:
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/Fourier.png)
 
@@ -414,6 +411,13 @@ raiz = root(función,0.3) #Se usa root para hallar las raíces.
 print(raiz) #Se muestran los valores determinados.
 ```
 Para poner esto en práctica, se solucionó tanto la ecuación teórica de los puntos de Lagrange de los satélites de Jupiter como su aproximación, viendo la diferencia entre las raices de ambas expresiones y determinar la validez de la aproximación.
+
+Cabe notar también que la representación de Fourier realizada se hizo de manera manual. Sin embargo, existen ya funciones incorporadas en la Python que permiten realizar transformadas de Fourier de distintos tipos a arreglos. La segunda se implemeta en la tarea. Para representaciones específicas, como para ondas tiepo sierra o triangular, la transformada se puede realizar manualmente también, calculando los coeficientes de Fourier con `scipy.integrate`.
+```
+fft(array) #Transformada de fourier discreta a un arreglo de una dimensión.
+
+fft2(array) #Transformada de fourier discreta a un arreglo de dos dimensiones.
+```
 
 ##Proyecto Final
 ###9 de Junio de 2015
