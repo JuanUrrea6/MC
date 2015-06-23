@@ -399,9 +399,10 @@ Los gráficos obtenidos al implementar este código se muestran a continuación:
 ###Viernes 19 de Junio de 2015
 ##Transformada de Fourier y Solución de Ecuaciones
 En el laboratorio y magistral, se aprendió el manejo básico y las distintas formas de realizar un ajuste por series de Fourier, en específico a una función escalón de altura $\frac{\pi}{4}$. Para lograr esto, se hicieron sumas recursivas de la función del **seno cardinal**, que toma la forma:
-$$\frac{Sen ax}{ax}$$
+$\frac{Sen ax}{ax}$
 Al hacer esto, se obtuvo lo siguiente:
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/Fourier.png)
+
 Luego de practicar un poco más los conceptos y aplicaciones de la transformada de Fourirer, se procedió a trabajar con la solución de ecuaciones y aproximaciones. Esto se puede trabajar, en polinomios, con la función `root`. Esto se hace como se muestra a continuación:
 ```
 from scipy.optimize import root #Se importa de la biblioteca de optimización de SciPy
