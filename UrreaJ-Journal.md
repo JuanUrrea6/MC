@@ -391,10 +391,27 @@ plot(u, ajuste(u, *fitpars), color = "Red", label = "Ajuste Teórico", ls = "--"
 xlim(2.2, 4.5)
 legend()
 ```
-
 Los gráficos obtenidos al implementar este código se muestran a continuación:
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Python/Ajuste.png)
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Python/Intrapolacion.png)
+
+
+###Viernes 19 de Junio de 2015
+##Transformada de Fourier y Solución de Ecuaciones
+En el laboratorio y magistral, se aprendió el manejo básico y las distintas formas de realizar un ajuste por series de Fourier, en específico a una función escalón de altura $\frac{\pi}{4}$. Para lograr esto, se hicieron sumas recursivas de la función del **seno cardinal**, que toma la forma:
+$$\frac{Sen ax}{ax}$$
+Al hacer esto, se obtuvo lo siguiente:
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/Fourier.png)
+Luego de practicar un poco más los conceptos y aplicaciones de la transformada de Fourirer, se procedió a trabajar con la solución de ecuaciones y aproximaciones. Esto se puede trabajar, en polinomios, con la función `root`. Esto se hace como se muestra a continuación:
+```
+from scipy.optimize import root #Se importa de la biblioteca de optimización de SciPy
+def funcion(x):
+     ... #Aquí se define la función o polinomio, que se busca solucionar.
+raiz = root(función,0.3) #Se usa root para hallar las raíces.
+print(raiz) #Se muestran los valores determinados.
+```
+Para poner esto en práctica, se solucionó tanto la ecuación teórica de los puntos de Lagrange de los satélites de Jupiter como su aproximación, viendo la diferencia entre las raices de ambas expresiones y determinar la validez de la aproximación.
+
 ##Proyecto Final
 ###9 de Junio de 2015
 Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
