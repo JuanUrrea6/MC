@@ -443,7 +443,9 @@ xlim(1900,1990)
 ylim(0,200)
 xlabel("t/año")
 ylabel("manchas solares/mes")
-
+```
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/ManchasSolares.png)
+```
 anoCortado = nuevoAno[3480:(len(nuevoAno)-1)] #Se crea la nueva partición de los años para evitar negativos.
 nuevaMedia = media[3480:(len(media) - 1)] #Nuevo arreglo recortado de medias.
 N = len(nuevaMedia) #Se determinan los parámetros del análisis de Fourier.
@@ -453,12 +455,16 @@ frecuencia = fftfreq(N,dt) #Se transforma el salto a frecuencias.
 scatter(frecuencia, abs(transform)) #Se grafican para visualizar.
 xlim(-6,6)
 ylim(0,10000)
-
+```
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/Frecuencias.png)
+```
 transform[np.abs(frecuencia) > 0.1] = 0 #Se construye el filtro.
 buenas = ifft(transform) #Se devuelven las pasadas a tiempo.
 plot(anoCortado, buenas) #Se grafica para visualizar/
 plot(anoCortado, media[3480:(len(media) - 1)])
 ```
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/Filtradas.png)
+
 ##Proyecto Final
 ###9 de Junio de 2015
 Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
