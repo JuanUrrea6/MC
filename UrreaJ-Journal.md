@@ -465,9 +465,18 @@ plot(anoCortado, media[3480:(len(media) - 1)])
 ```
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/Filtradas.png)
 
+###Miércoles 24 de Junio de 2015
+##Coordenadas Esféricas y Métodos Numéricos
+En el laboratorio de hoy se trabajó en Python para poder analizar datos en un set de coordenadas y poderlos convertir a otras. En específico, se trabajó con coordenadas cilíndricas para encontrar las coordenadas cartesianas correspondientes en un recorrido por un sector de Bogotá. Para lograr esto, se implementó el código contenido en este notebook. (ADJUNTAR)
+
+En la clase magistral, se habló de la teoría de bases de espacios vectoriales y métodos numéricos para obtener resultados bastante aproximados de integrales. En específico, se habló de los ajustes por polinomios de Lagrange, un método que ya se había utilizado antes. Para aplicar esto, se estudió en el Hands-On la regla **3/8 de Simpson**, la cual proporciona, por medio de su construcción como una función en Python, un resultado aproximado a una integral en un intervalo dado de una función.
+
 ##Proyecto Final
 ###9 de Junio de 2015
 Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
 
 ###Martes 16 de Junio de 2015
 Para el proyecto final sería posible, ahora que se sabe como realizar ajustes básicos a distintos tipos de curvas, la implementación de esto a distintos sets de datos, como podría ser para problemas de movimient, como se mencionó antes, o de cosmología, mi principal interés. Estas funciones podrían venir especialmente en la sección de contraste con teoría que se realice en el proyecto. Esto podría juntarse con una función que he venido investigando, **quiver()**, con la cual se pueden graficar distintos campos vectoriales, por lo que la realización de ajuste de curva podrá ayudar a visualizar el comportamiento de un movimiento bajo el efecto de dichos campos, creando un análisis gráfica bastante completo. El análisis y estudio de situaciones como la órbita de satélites sería bastante interesante cuando se toma el campo de fuerza gravitacional del cuerpo principal, los datos conocidos de posición y el ajuste para contrastar.
+
+###Miércoles 24 de Junio de 2015
+Investigando para el proyecto, y teniendo en mente el interés por problemas de ámbito astronómico, he estado construyendo un notebook que contiene mis "avances" encontrando algún problema específico para solucionar. Por ahora, he estado explorando la construcción de campos vectoriales, específicamente el gravitacional, cuyo modelo se muestra en el siguiente notebook. Espero más adelante poder enfocarme en un aspecto más específico, como el estudio de una determinada estrella o agrupación. (ADJUNTAR)
