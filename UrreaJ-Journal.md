@@ -481,5 +481,7 @@ Para el proyecto final sería posible, ahora que se sabe como realizar ajustes b
 ###Miércoles 24 de Junio de 2015
 Investigando para el proyecto, y teniendo en mente el interés por problemas de ámbito astronómico, he estado construyendo un notebook que contiene mis "avances" encontrando algún problema específico para solucionar. Por ahora, he estado explorando la construcción de campos vectoriales, específicamente el gravitacional, cuyo modelo se muestra en el siguiente notebook. Espero más adelante poder enfocarme en un aspecto más específico, como el estudio de una determinada estrella o agrupación. 
 https://github.com/JuanUrrea6/MC/blob/master/Proyecto%20Final/Quiver%20y%20Graficaci%C3%B3n.ipynb
-Aquí se muestra el resultado parcial de este proceso, aunque faltan corregir aspectos como los puntos alrededor del planeta para visalizar el campo de manera totalmente simétrica.
+
+Aquí se muestra el resultado parcial de este proceso, aunque faltan corregir aspectos como los puntos alrededor del planeta para visualizar el campo de manera totalmente simétrica.
+
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/Gravedad.png)
