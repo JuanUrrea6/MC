@@ -394,7 +394,61 @@ legend()
 Los gráficos obtenidos al implementar este código se muestran a continuación:
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Python/Ajuste.png)
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Python/Intrapolacion.png)
-###Miércoles 17 de Junio
+
+###Miércoles 17 de Junio de 2015
+##Transformada de Fourier y Solución de Ecuaciones
+En el laboratorio y magistral, se aprendió el manejo básico y las distintas formas de realizar un ajuste por series de Fourier, en específico a una función escalón de altura pi cuartos. Para lograr esto, se hicieron sumas recursivas de la función del **seno cardinal**.
+Al hacer esto, se obtuvo lo siguiente:
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/Fourier.png)
+
+Luego de practicar un poco más los conceptos y aplicaciones de la transformada de Fourirer, se procedió a trabajar con la solución de ecuaciones y aproximaciones. Esto se puede trabajar, en polinomios, con la función `root`. Esto se hace como se muestra a continuación:
+```
+from scipy.optimize import root #Se importa de la biblioteca de optimización de SciPy
+def funcion(x):
+     ... #Aquí se define la función o polinomio, que se busca solucionar.
+raiz = root(función,0.3) #Se usa root para hallar las raíces.
+print(raiz) #Se muestran los valores determinados.
+```
+Para poner esto en práctica, se solucionó tanto la ecuación teórica de los puntos de Lagrange de los satélites de Jupiter como su aproximación, viendo la diferencia entre las raices de ambas expresiones y determinar la validez de la aproximación.
+```
+%pylab inline
+from scipy.optimize import root
+
+def funcion1(x): #Definir la función a solucionar
+    result = (10000/(300-x)**2) -(100/x**2) - ((10000/(100+10000))*300 - x)*((10000 + 100)/300**3)
+    return result
+ 
+ print(root(funcion1, 0.3)) #Encontrar sus raices.
+```
+ x: array([ 42.44247395])
+ 
+ nfev: 26
+ 
+ fjac: array([[-1.]])
+ 
+ fun: array([ 0.])
+ 
+ r: array([-0.00416061])
+ 
+ qtf: array([  1.94289029e-14])
+ 
+ success: True
+ 
+ message: 'The solution converged.'
+ 
+ status: 1
+```
+print(300*(100/30000)**(1/3)) #Evaluar la aproximación.
+```
+Cuando se utilizan m1= 10000 y m2 = 100, con R = 300, se obtienen las soluciones exacta y aproximada anteriormente mostradas, siendo 42.442 la exacta y 44.814 la aproximada. Se obtuvo un error del 5.6%.
+
+Cabe notar también que la representación de Fourier realizada se hizo de manera manual. Sin embargo, existen ya funciones incorporadas en la Python que permiten realizar transformadas de Fourier de distintos tipos a arreglos. La segunda se implemeta en la tarea. Para representaciones específicas, como para ondas tiepo sierra o triangular, la transformada se puede realizar manualmente también, calculando los coeficientes de Fourier con `scipy.integrate`.
+```
+fft(array) #Transformada de fourier discreta a un arreglo de una dimensión.
+
+fft2(array) #Transformada de fourier discreta a un arreglo de dos dimensiones.
+```
+###Viernes 19 de Junio de 2015
 ##Transformada de Fourier y Representaciones
 Durante la clase, se explicó la aplicación de las transformadas de Fourier para el procesamiento de funciones e imágenes. Se hizo énfasis en dicho manejo de imágenes, modificando de diversas formas la imagen de Lena por medio de filtros de frecuencias. Para el Hands-On se trabajaron estos dos aspectos, primero realizando representaciones de Fourier a una onda triangular para luego hallar el negativo de Lena y girar la imagen.
 El primer punto del Hands-On se realizó con el siguiente código:
@@ -530,60 +584,6 @@ for i in range(512):
  imshow(lenaHorizontal, cmap='gray')
 ```
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/LenaHorizontal.png)
-
-###Viernes 19 de Junio de 2015
-##Transformada de Fourier y Solución de Ecuaciones
-En el laboratorio y magistral, se aprendió el manejo básico y las distintas formas de realizar un ajuste por series de Fourier, en específico a una función escalón de altura pi cuartos. Para lograr esto, se hicieron sumas recursivas de la función del **seno cardinal**.
-Al hacer esto, se obtuvo lo siguiente:
-![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/Fourier.png)
-
-Luego de practicar un poco más los conceptos y aplicaciones de la transformada de Fourirer, se procedió a trabajar con la solución de ecuaciones y aproximaciones. Esto se puede trabajar, en polinomios, con la función `root`. Esto se hace como se muestra a continuación:
-```
-from scipy.optimize import root #Se importa de la biblioteca de optimización de SciPy
-def funcion(x):
-     ... #Aquí se define la función o polinomio, que se busca solucionar.
-raiz = root(función,0.3) #Se usa root para hallar las raíces.
-print(raiz) #Se muestran los valores determinados.
-```
-Para poner esto en práctica, se solucionó tanto la ecuación teórica de los puntos de Lagrange de los satélites de Jupiter como su aproximación, viendo la diferencia entre las raices de ambas expresiones y determinar la validez de la aproximación.
-```
-%pylab inline
-from scipy.optimize import root
-
-def funcion1(x): #Definir la función a solucionar
-    result = (10000/(300-x)**2) -(100/x**2) - ((10000/(100+10000))*300 - x)*((10000 + 100)/300**3)
-    return result
- 
- print(root(funcion1, 0.3)) #Encontrar sus raices.
-```
- x: array([ 42.44247395])
- 
- nfev: 26
- 
- fjac: array([[-1.]])
- 
- fun: array([ 0.])
- 
- r: array([-0.00416061])
- 
- qtf: array([  1.94289029e-14])
- 
- success: True
- 
- message: 'The solution converged.'
- 
- status: 1
-```
-print(300*(100/30000)**(1/3)) #Evaluar la aproximación.
-```
-Cuando se utilizan m1= 10000 y m2 = 100, con R = 300, se obtienen las soluciones exacta y aproximada anteriormente mostradas, siendo 42.442 la exacta y 44.814 la aproximada. Se obtuvo un error del 5.6%.
-
-Cabe notar también que la representación de Fourier realizada se hizo de manera manual. Sin embargo, existen ya funciones incorporadas en la Python que permiten realizar transformadas de Fourier de distintos tipos a arreglos. La segunda se implemeta en la tarea. Para representaciones específicas, como para ondas tiepo sierra o triangular, la transformada se puede realizar manualmente también, calculando los coeficientes de Fourier con `scipy.integrate`.
-```
-fft(array) #Transformada de fourier discreta a un arreglo de una dimensión.
-
-fft2(array) #Transformada de fourier discreta a un arreglo de dos dimensiones.
-```
 
 ###Martes 23 de Junio de 2015
 ## Filtros y Fourier
