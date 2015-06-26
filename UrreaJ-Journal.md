@@ -394,7 +394,101 @@ legend()
 Los gráficos obtenidos al implementar este código se muestran a continuación:
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Python/Ajuste.png)
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Python/Intrapolacion.png)
+###Miércoles 17 de Junio
+##Transformada de Fourier y Representaciones
+Durante la clase, se explicó la aplicación de las transformadas de Fourier para el procesamiento de funciones e imágenes. Se hizo énfasis en dicho manejo de imágenes, modificando de diversas formas la imagen de Lena por medio de filtros de frecuencias. Para el Hands-On se trabajaron estos dos aspectos, primero realizando representaciones de Fourier a una onda triangular para luego hallar el negativo de Lena y girar la imagen.
+El primer punto del Hands-On se realizó con el siguiente código:
+```
+%pylab inline
+from scipy import integrate
 
+#Definir la onda triangular.
+x = linspace(0,6,6000)
+x1 = linspace(0,1,1000)
+x2 = linspace(0,2,2000)
+y1 = []
+y2 = []
+y3 = []
+y4 = []
+
+for i in range(len(x1)):
+    actual = x1[i]
+    y1.append(actual)
+    y3.append(actual)
+
+for j in range(len(x2)):
+    actual1 = 1 - (0.5*x2[j])
+    y2.append(actual1)
+    y4.append(actual1)
+
+#Unión de Valores en Y
+yTotal = y1 + y2 + y3 + y4
+
+figure(figsize(7,5))
+plot(x,yTotal)
+title("Onda Triangular")
+xlabel("X")
+ylabel("Y")
+savefig("OndaTriangular.png")
+```
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/OndaTriangular.png)
+```
+#Realizar representación de Fourier
+#Definir los coeficientes del primer trozo f(x)=x
+def A(n, T):
+    funcion = lambda x: x*cos((2*pi*n*x)/T)
+    actual = quad(funcion, -T/2, T/2)
+    return actual[0]
+def B(n, T):
+    funcion = lambda x: 1*x*sin((2*pi*n*x)/T)
+    actual = quad(funcion, -T/2, T/2)
+    return actual[0]
+ 
+ #Realizar representación de Fourier
+#Coeficientes del segundo trozo f(x) = 1-0.5x
+def A2(n, T):
+    funcion = lambda x: (1-0.5*x)*cos((2*pi*n*x)/T)
+    actual = quad(funcion, -T/2, T/2)
+    return actual[0]
+def B2(n, T):
+    funcion = lambda x: (1-0.5*x)*x*sin((2*pi*n*x)/T)
+    actual = quad(funcion, -T/2, T/2)
+    return actual[0]
+ 
+ #Sumatoria de Fourier Para f(x)=x
+def ajuste(n, T, x):
+    arreglo = []
+    suma = 0
+    for j in range(len(x)):
+        for i in range(n):
+            actual1 = A(n, T)*cos(2*pi*n*x[i]/T)
+            actual2 = B(n, T)*sin(2*pi*n*x[i]/T)
+            suma = suma + actual1 + actual2
+        arreglo.append(-suma)
+    return arreglo
+ 
+ #Serie de Fourier para f(x)=1-0.5x
+def ajuste2(n, T, x):
+    arreglo = []
+    suma = 0
+    for j in range(len(x)):
+        for i in range(n):
+            actual1 = (1/2)*A2(n, T)*cos(2*pi*n*x[i]/T)
+            actual2 = (1/2)*B2(n, T)*sin(2*pi*n*x[i]/T)
+            suma = suma + actual1 + actual2
+        arreglo.append(suma + 1)
+    return arreglo
+ 
+ figure(figsize(7,5))
+plot(x1, ajuste(2, 1, x1), color = "Red")
+plot(linspace(1, 3, 2000), ajuste2(2,1,linspace(1,3,2000)), color = "Green")
+plot(linspace(3,4,1000), ajuste(2,1, linspace(3,4,1000)), color = "Purple")
+plot(linspace(4,6,2000), ajuste2(2,1,linspace(4,6,2000)), color = "Yellow")
+title("Onda Triangular")
+xlabel("X")
+ylabel("Y")
+```
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/FourierTriangular.png)
 
 ###Viernes 19 de Junio de 2015
 ##Transformada de Fourier y Solución de Ecuaciones
