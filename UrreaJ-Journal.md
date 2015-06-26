@@ -490,6 +490,47 @@ ylabel("Y")
 ```
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/FourierTriangular.png)
 
+Para el procesamiento de la imagen conocida como Lena, se utilizó el siguiente código, que permitió obtener su negativo, girarla horizontalmente y girarla verticalmente.
+```
+from scipy import misc
+from scipy.fftpack import *
+
+lena = misc.lena()
+figure(figsize(5,5))
+imshow(1.5*lena, cmap = 'gray')
+```
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/Lena.png)
+```
+#Sacar el negativo
+#Se resta cada valor RGB a 255.
+negativoLena = zeros((512,512))
+for i in range(512):
+    for j in range(512):
+        negativoLena[i][j] = 255 - lena[i][j]
+ imshow(negativoLena, cmap = 'gray')
+```
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/NegativoLena.png)
+```
+#Voltear la imagen verticalmente
+#Se invierten filas y columnas.
+voltearLena = zeros((512,512))
+for i in range(512):
+    for j in range(512):
+        voltearLena[i][j] = lena[511-i][511-j]
+ imshow(voltearLena, cmap='gray')
+```
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/LenaVertical.png)
+```
+#Voltearla horizontalmente
+#Se invierten solo las columnas.
+lenaHorizontal = zeros((512,512))
+for i in range(512):
+    for j in range(512):
+        lenaHorizontal[i][j] = lena[i][511-j]
+ imshow(lenaHorizontal, cmap='gray')
+```
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/LenaHorizontal.png)
+
 ###Viernes 19 de Junio de 2015
 ##Transformada de Fourier y Solución de Ecuaciones
 En el laboratorio y magistral, se aprendió el manejo básico y las distintas formas de realizar un ajuste por series de Fourier, en específico a una función escalón de altura pi cuartos. Para lograr esto, se hicieron sumas recursivas de la función del **seno cardinal**.
