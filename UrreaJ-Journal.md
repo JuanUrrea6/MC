@@ -557,13 +557,21 @@ def funcion1(x): #Definir la función a solucionar
  print(root(funcion1, 0.3)) #Encontrar sus raices.
 ```
  x: array([ 42.44247395])
+ 
  nfev: 26
+ 
  fjac: array([[-1.]])
+ 
  fun: array([ 0.])
+ 
  r: array([-0.00416061])
+ 
  qtf: array([  1.94289029e-14])
+ 
  success: True
+ 
  message: 'The solution converged.'
+ 
  status: 1
 ```
 print(300*(100/30000)**(1/3)) #Evaluar la aproximación.
