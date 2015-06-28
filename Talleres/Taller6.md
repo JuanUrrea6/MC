@@ -26,3 +26,9 @@
 	
 
 	* ✵✵✵ Lo anterior debe resultar muy irregular, proponga alguna estrategia para obtener algo más razonable e impleméntela.
+
+##Solución:
+
+La solución a este taller se encuentra en el siguiente notebook.
+
+https://github.com/JuanUrrea6/MC/blob/master/Talleres/Material/Taller6.ipynb
