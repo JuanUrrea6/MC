@@ -633,7 +633,8 @@ plot(anoCortado, media[3480:(len(media) - 1)])
 
 ###Miércoles 24 de Junio de 2015
 ##Coordenadas Esféricas y Métodos Numéricos
-En el laboratorio de hoy se trabajó en Python para poder analizar datos en un set de coordenadas y poderlos convertir a otras. En específico, se trabajó con coordenadas cilíndricas para encontrar las coordenadas cartesianas correspondientes en un recorrido por un sector de Bogotá. Para lograr esto, se implementó el código contenido en este notebook. (ADJUNTAR)
+En el laboratorio de hoy se trabajó en Python para poder analizar datos en un set de coordenadas y poderlos convertir a otras. En específico, se trabajó con coordenadas cilíndricas para encontrar las coordenadas cartesianas correspondientes en un recorrido por un sector de Bogotá. Para lograr esto, se implementó el código contenido en el notebook del taller 6 y se obtuvo el siguiente resultado.
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/Recorrido.png)
 
 En la clase magistral, se habló de la teoría de bases de espacios vectoriales y métodos numéricos para obtener resultados bastante aproximados de integrales. En específico, se habló de los ajustes por polinomios de Lagrange, un método que ya se había utilizado antes. Para aplicar esto, se estudió en el Hands-On la regla **3/8 de Simpson**, la cual proporciona, por medio de su construcción como una función en Python, un resultado aproximado a una integral en un intervalo dado de una función.
 
