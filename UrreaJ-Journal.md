@@ -637,6 +637,15 @@ En el laboratorio de hoy se trabajó en Python para poder analizar datos en un s
 
 En la clase magistral, se habló de la teoría de bases de espacios vectoriales y métodos numéricos para obtener resultados bastante aproximados de integrales. En específico, se habló de los ajustes por polinomios de Lagrange, un método que ya se había utilizado antes. Para aplicar esto, se estudió en el Hands-On la regla **3/8 de Simpson**, la cual proporciona, por medio de su construcción como una función en Python, un resultado aproximado a una integral en un intervalo dado de una función.
 
+###Viernes 26 de Junio de 2015
+##Taller de Cinemática
+Durante la sección de laboratorio se continuó trabajando con el taller de Cinemática, aprendiendo a usar con más detalle el módulo **smopy** y sus funciones para editar y utilizar mapas para distintas gráficas. 
+
+###Martes 30 de Junio de 2015
+##Ecuaciones Diferenciales y Mecánica Cuántica
+Durante la sesión de la clase magistral se trabajó en la resolución de la ecuación de Schrodinger para la resonancia magnética nuclear, haciendo uso de matrices en Python y las funciones de scipy.integrate para evaluar y explorar las propiedades de unicidad y las distintas probabilidades involucradas en la teoría. Durante la clase también se explicó el manejo del método de ODE para la resolución de ecuaciones diferenciales con Python. Esto se realiza importando el módulo `scipy.integrate`, donde se encuentra la función `ode()` y `odeint()`. Estas permiten solucionar ecuaciones diferenciales que se den como parámetro sobre un intervalo.
+
+Durante el laboratorio 
 ##Proyecto Final
 ###9 de Junio de 2015
 Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
