@@ -129,7 +129,7 @@ title("Rossler System: Bifurcation Diagram\n a=b=0.1")
 xlabel("C")
 savefig("Bifurcation.png")
 ```
-IMAGEN BIFUR
+![](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Bifurcation.png)
 ```
 #Realizar animación
 tiempos = linspace(0, 600, 20000)
@@ -252,4 +252,4 @@ ylim(-50,200)
 axis('off')
 #savefig("Rotaciones.png")
 ```
-IMAGEN ROTACIONES
+![](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Rotaciones.png)
