@@ -76,14 +76,14 @@ ax.set_zlabel("z")
 ax.set_title("Atractor de Rossell")
 show()
 ```
-IMAGEN 3D
+![](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/3D.png)
 ```
 #Se grafica la proyección vista desde Z.
 figure(figsize=(10,10))
 plot(funsol[:,0], funsol[:,1])
 title("Atractor de Rossell\nProyección en 2D")
 ```
-IMAGEN 2D
+![](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/2D.png)
 ```
 #Distintos valores de C
 figure(figsize=(10,10))
@@ -102,7 +102,7 @@ for i in range(len(arregloC)):
     plot(funsol[:, 0][-8000:], funsol[:,1][-8000:])
     title("C={0}".format(arregloC[i]))
 ```
-IMAGEN PANELES
+![](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Paneles.png)
 ```
 buenas = [] #Se crean los arreglos que se graficarán.
 constantes = []
