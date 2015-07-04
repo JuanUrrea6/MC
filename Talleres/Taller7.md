@@ -253,3 +253,7 @@ axis('off')
 #savefig("Rotaciones.png")
 ```
 ![](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Rotaciones.png)
+
+Por último, se utilizaron estas gráficas para crear una animación, haciendo uso de Gifsicle. Esto es lo que se obtiene.
+
+![](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Rotacion.gif)
