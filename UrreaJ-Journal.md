@@ -646,7 +646,39 @@ Durante la sección de laboratorio se continuó trabajando con el taller de Cine
 ##Ecuaciones Diferenciales y Mecánica Cuántica
 Durante la sesión de la clase magistral se trabajó en la resolución de la ecuación de Schrodinger para la resonancia magnética nuclear, haciendo uso de matrices en Python y las funciones de scipy.integrate para evaluar y explorar las propiedades de unicidad y las distintas probabilidades involucradas en la teoría. Durante la clase también se explicó el manejo del método de ODE para la resolución de ecuaciones diferenciales con Python. Esto se realiza importando el módulo `scipy.integrate`, donde se encuentra la función `ode()` y `odeint()`. Estas permiten solucionar ecuaciones diferenciales que se den como parámetro sobre un intervalo.
 
-Durante el laboratorio 
+##Miercoles!!!!
+
+###Viernes 3 de Julio de 2015
+##Uso de Sympy
+Durante la clase se explicó el uso básico y fundamental de la librería Sympy de Python para la realización de cálculos simbólicos. Para profundizar en esto, se realizó el Hands-On, del cual se puede resaltar lo siguiente:
+```
+%pylab inline
+from sympy import *
+
+#Inicializar Sympy y declaración de símbolos
+init_printing(use_unicode=False, wrap_line=False, no_global=True)
+t,fn,fn1,h,tn,tn1=symbols('t fn fn1 h tn tn1')
+
+#Adam Bahsforth de Orden 2
+tn1 = tn - h
+simplify(integrate(fn1*(t - tn)/(tn1 - tn) + fn*(t - tn1)/(tn - tn1), (t, tn,(tn + h))))
+
+#Adam Bashforth de Orden 3
+fn2,tn2=symbols('fn2 tn2')
+tn2 = tn - 2*h
+simplify(integrate(fn*((t-tn1)*(t-tn2))/((tn-tn1)*(tn-tn2)) + fn1*((t-tn)*(t-tn2))/((tn1-tn)*(tn1-tn2)) + fn2*((t-tn)*(t-tn1))/((tn2 - tn)*(tn2-tn1)), (t, tn,(tn+h))))
+
+#Adam Bashforth de Orden 4
+fn3,tn3=symbols('fn3 tn3')
+tn3 = tn - 3*h
+simplify(integrate(fn*(t-tn1)*(t-tn2)*(t-tn3)/((tn-tn1)*(tn-tn2)*(tn-tn3)) + fn1*(t-tn)*(t-tn2)*(t-tn3)/((tn1-tn)*(tn1-tn2)*(tn1-tn3)) + fn2*(t-tn)*(t-tn3)*(t-tn1)/((tn2-tn)*(tn2-tn3)*(tn2-tn1)) + fn3*(t-tn1)*(t-tn2)*(t-tn)/((tn3-tn1)*(tn3-tn2)*(tn3-tn)),(t, tn, tn+h)))
+```
+Con el código anterior se utiliza Sympy para resolver las distintas integrales que permiten definir las funciones del método de Adam-Bashforth de distintos órdenes. Para futuras referencias, se encuentra en este notebook:
+
+https://github.com/JuanUrrea6/MC/blob/master/Material/Hands-On%2013.ipynb
+
+para el manejo de Sympy, se vio que resulta fundamental la declaración de cada símbolo antes de usarlo en una expresión, al igual que en operaciones como integración y derivación, pues se debe indicar cuales son constantes y variables.
+
 ##Proyecto Final
 ###9 de Junio de 2015
 Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
