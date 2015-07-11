@@ -646,9 +646,7 @@ Durante la sección de laboratorio se continuó trabajando con el taller de Cine
 ##Ecuaciones Diferenciales y Mecánica Cuántica
 Durante la sesión de la clase magistral se trabajó en la resolución de la ecuación de Schrodinger para la resonancia magnética nuclear, haciendo uso de matrices en Python y las funciones de scipy.integrate para evaluar y explorar las propiedades de unicidad y las distintas probabilidades involucradas en la teoría. Durante la clase también se explicó el manejo del método de ODE para la resolución de ecuaciones diferenciales con Python. Esto se realiza importando el módulo `scipy.integrate`, donde se encuentra la función `ode()` y `odeint()`. Estas permiten solucionar ecuaciones diferenciales que se den como parámetro sobre un intervalo.
 
-##Miercoles!!!!
-
-###Viernes 3 de Julio de 2015
+###Miercoles 1 de Julio de 2015
 ##Uso de Sympy
 Durante la clase se explicó el uso básico y fundamental de la librería Sympy de Python para la realización de cálculos simbólicos. Para profundizar en esto, se realizó el Hands-On, del cual se puede resaltar lo siguiente:
 ```
@@ -678,6 +676,24 @@ Con el código anterior se utiliza Sympy para resolver las distintas integrales 
 https://github.com/JuanUrrea6/MC/blob/master/Material/Hands-On%2013.ipynb
 
 para el manejo de Sympy, se vio que resulta fundamental la declaración de cada símbolo antes de usarlo en una expresión, al igual que en operaciones como integración y derivación, pues se debe indicar cuales son constantes y variables.
+
+###Viernes 3 de Julio de 2015
+##Introducción a Ecuaciones Diferenciales Parciales
+Durante esta clase se continuó resolviendo el Hands-On anterior basado en el manejo de **Sympy**, a la vez que se comenzó a hablar de de la posible resolución de ecuaciones difeenciales parciales usando Python, tanto con métodos propios del lenguaje como con simulaciones. El Hands-On consistió en la resolución de de las ecuaciones para resonancia magnética, basándose en el uso y operación de las matrices de Pauli.
+
+###Martes 7 de Julio de 2015
+##Ecuaciones Diferenciales Parciales 1
+Durante esta clase se explicó el uso de herramientas como el método de relajación para la resolución de ecuaciones diferenciales parciales, como los son la ecuación de Onda o la de Poisson. El Hands-On consistió en la resolución del oscilador armónico basados en su ecuación diferencial, lo que dio un primer vistazo a la utilización de Python para este tipo de problemas. 
+
+###Miércoles 9 de Julio de 2015
+##Ecuaciones Diferenciales Parciales 2
+En esta clase se continuó trabajando el tema de análisis y resolución de ecuaciones diferenciales parciales, explorando ejemplos más específicos, como la ecuación de Poisson para electricidad. El Hands-On consistió en la modificación del código ejemplo dado en los "slides" de la clase de manera que se pudiesen simular distintos tipos de condiciones de forntera para ondas propagándose en una cuerda. Esto resultó especialmente útil para el desarrollo de mi proyecto final en conjunto con Alfredo Ricci, pues la realización de una animación que muestre las oscilaciones de las cuerdas según se define por la propagación de la onda de sonido sirve como base de desarrollo a nuestra simulación de una guitarra.
+
+Durante la sesión de laboratorio se planteó como taller resolver la propagación de una perturbación de tipo gaussiano en un cubo con condiciones de frontera que conectaran caras según muestra el diagrama del enunciado. Esto se empezó a realizar partiendo como guía del ejemplo resuleto para una cara cuadrada en los "slides" de la clase, y se continua el viernes.
+
+###Viernes 10 de Julio de 2015
+##Contnuación del Taller de Laboratorio
+Durante la sesión de laboratorio y clase magistral se continuó trabajando en el taller de la resolución de la perturbación Gaussiana en el cubo modelado según los parámetros dados por el enunciado. También se aprovechó el tiempo para resolver dudas acerca del desarrollo de la tarea.
 
 ##Proyecto Final
 ###9 de Junio de 2015
