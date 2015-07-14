@@ -695,6 +695,11 @@ Durante la sesión de laboratorio se planteó como taller resolver la propagaci�
 ##Contnuación del Taller de Laboratorio
 Durante la sesión de laboratorio y clase magistral se continuó trabajando en el taller de la resolución de la perturbación Gaussiana en el cubo modelado según los parámetros dados por el enunciado. También se aprovechó el tiempo para resolver dudas acerca del desarrollo de la tarea.
 
+###Martes 14 de Julio de 2015
+##Taller de Ecuación de Onda y Exposición
+Durante la sesión de laboratorio se trabajó en un taller que permitió profundizar en las aproximaciones numéricas necesarias para la resolución de ecuaciones diferenciales parciales, pues fue necesario realizar manualmente los despejes y aproximaciones para las distintas derivadas parciales involucradas en la ecuación de Onda bidimensional con amortiguamiento. Más adelante su adjuntará el link a este taller desarrollado.
+####Insertar LINK.
+
 ##Proyecto Final
 ###9 de Junio de 2015
 Para el proyecto final me gustaría trabajar en un estudio de movimiento y trayectorias como el que fue mostrado en clase, haciendo uso de la creación de animaciones en Python. Considero que me sería bastante útil, ya que a la vez que amplía mi conocimiento en programación usando Python, resulta un complemento bastante bueno para mi carrera de física, en especial para el área de cosmología (que me atrae), e incluso para visualizar casos problema básicos de movimientos. Se me ocurre que sería posible simular los movimientos de cuerpos celestes o microscópicos en diferentes montajes.
