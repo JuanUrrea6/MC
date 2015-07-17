@@ -706,7 +706,40 @@ https://github.com/JuanUrrea6/MC/blob/master/Material/Hands-On%2014.ipynb
 
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/DatosObtenidos.png)
 
-Es notable, durante la resolución de este Hands-On, la utilización del comando `shuffle`, importado desde la librería **random** de Python, el cual toma un arreglo de objetos y lo revuelve de manera aleatoria. Fue de especial utilidad para este problema probabilístico y seguramente lo es para esta temática en general, pues permite la creación de arreglos organizados, para cumplir condiciones dadas, y luego desorganizarlos para quitar lo determinista del estudio.
+Es notable, durante la resolución de este Hands-On, la utilización del comando `shuffle`, importado desde la librería **random** de Python, el cual toma un arreglo de objetos y lo revuelve de manera aleatoria. Fue de especial utilidad para este problema probabilístico y seguramente lo es para esta temática en general, pues permite la creación de arreglos organizados, para cumplir condiciones dadas, y luego desorganizarlos para quitar lo determinista del estudio. Su utilización se muestra a continuación:
+```
+#Se crea un arreglo con elementos
+arreglo = [1,2,3]
+
+#Se utiliza el comando shuffle. Esto revuelve los elementos aleatoriamente en el arreglo.
+arreglo = shuffle(arreglo)
+```
+También se muestra la parte vital de código utilizada para realizar el experimento de los peruanos y colombianos. 
+```
+#Función para determinar la probabilidad buscada.
+#Parámetro: N=número de colombianos en la mesa.
+def proba(N):
+    exitos = 0 #Cantidad de Exitos
+    laMesa = [] #Mi mesa vacía.
+    for __ in range(N+10): #Llenar la mesa de puestos. 0 es colombiano.
+        laMesa.append(0)
+    for i in range(10): #LLenar los demás puestos. 1 es Peruano.
+        laMesa[i]=1
+    shuffle(laMesa)
+    
+    i=1
+    while i < len(laMesa)-1:
+        if((laMesa[i] == 1) & (laMesa[i+1] == 0) & (laMesa[i-1] == 0)):
+            exitos+=1
+        i+=1
+        
+    if((laMesa[0] == 1) & (laMesa[1] == 0) & (laMesa[-1] == 0)):
+            exitos+=1
+    if((laMesa[-1]== 1) & (laMesa[len(laMesa)-2] == 0) & (laMesa[0] == 0)):
+            exitos += 1
+    return exitos/10
+```
+La función aquí creada luego se utiliza iterativamente para obtener los resultados, sin embargo lo que se muestra es lo que considero permite solucionar el problema del enunciado.
 
 ##Proyecto Final
 ###9 de Junio de 2015
