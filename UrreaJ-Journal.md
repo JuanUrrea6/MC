@@ -695,7 +695,7 @@ En esta clase se continuó trabajando el tema de análisis y resolución de ecua
 Durante la sesión de laboratorio se planteó como taller resolver la propagación de una perturbación de tipo gaussiano en un cubo con condiciones de frontera que conectaran caras según muestra el diagrama del enunciado. Esto se empezó a realizar partiendo como guía del ejemplo resuleto para una cara cuadrada en los "slides" de la clase, y se continua el viernes.
 
 ###Viernes 10 de Julio de 2015
-##Contnuación del Taller de Laboratorio
+##Continuación del Taller de Laboratorio
 Durante la sesión de laboratorio y clase magistral se continuó trabajando en el taller de la resolución de la perturbación Gaussiana en el cubo modelado según los parámetros dados por el enunciado. También se aprovechó el tiempo para resolver dudas acerca del desarrollo de la tarea.
 
 ###Martes 14 de Julio de 2015
@@ -705,6 +705,8 @@ Durante la sesión de laboratorio se trabajó en un taller que permitió profund
 https://github.com/JuanUrrea6/MC/blob/master/Material/Hands-On%2014.ipynb
 
 ![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/DatosObtenidos.png)
+
+Es notable, durante la resolución de este Hands-On, la utilización del comando `shuffle`, importado desde la librería **random** de Python, el cual toma un arreglo de objetos y lo revuelve de manera aleatoria. Fue de especial utilidad para este problema probabilístico y seguramente lo es para esta temática en general, pues permite la creación de arreglos organizados, para cumplir condiciones dadas, y luego desorganizarlos para quitar lo determinista del estudio.
 
 ##Proyecto Final
 ###9 de Junio de 2015
