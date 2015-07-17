@@ -680,6 +680,9 @@ para el manejo de Sympy, se vio que resulta fundamental la declaración de cada 
 ###Viernes 3 de Julio de 2015
 ##Introducción a Ecuaciones Diferenciales Parciales
 Durante esta clase se continuó resolviendo el Hands-On anterior basado en el manejo de **Sympy**, a la vez que se comenzó a hablar de de la posible resolución de ecuaciones difeenciales parciales usando Python, tanto con métodos propios del lenguaje como con simulaciones. El Hands-On consistió en la resolución de de las ecuaciones para resonancia magnética, basándose en el uso y operación de las matrices de Pauli.
+El desarrollo de este hands-on se encuentra en el siguiente notebook
+
+https://github.com/JuanUrrea6/MC/blob/master/Material/Hands-On%2013.ipynb
 
 ###Martes 7 de Julio de 2015
 ##Ecuaciones Diferenciales Parciales 1
@@ -697,8 +700,11 @@ Durante la sesión de laboratorio y clase magistral se continuó trabajando en e
 
 ###Martes 14 de Julio de 2015
 ##Taller de Ecuación de Onda y Exposición
-Durante la sesión de laboratorio se trabajó en un taller que permitió profundizar en las aproximaciones numéricas necesarias para la resolución de ecuaciones diferenciales parciales, pues fue necesario realizar manualmente los despejes y aproximaciones para las distintas derivadas parciales involucradas en la ecuación de Onda bidimensional con amortiguamiento. Más adelante su adjuntará el link a este taller desarrollado.
-####Insertar LINK.
+Durante la sesión de laboratorio se trabajó en un taller que permitió profundizar en las aproximaciones numéricas necesarias para la resolución de ecuaciones diferenciales parciales, pues fue necesario realizar manualmente los despejes y aproximaciones para las distintas derivadas parciales involucradas en la ecuación de Onda bidimensional con amortiguamiento. Sin embargo, debido a problemas técnicos, el taller se canceló por ahora, por lo que se procedió con el Hands-On y el experimento probabilístico propuesto en el enunciado. Su resolución empírica puede encontrarse en este notebook, y su gráfica resultante se muestra a continuación.
+
+https://github.com/JuanUrrea6/MC/blob/master/Material/Hands-On%2014.ipynb
+
+![alt text](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Material/DatosObtenidos.png)
 
 ##Proyecto Final
 ###9 de Junio de 2015
