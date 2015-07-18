@@ -13,3 +13,7 @@
 La solución a este taller se encuentra en el siguiente notebook:
 
 https://github.com/JuanUrrea6/MC/blob/master/Talleres/Material/Taller%2010.ipynb
+
+Se obtuvo la siguiente gráfica como resultado:
+
+![](https://raw.githubusercontent.com/JuanUrrea6/MC/master/Talleres/Material/Ising3D.png)
